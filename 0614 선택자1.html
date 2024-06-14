@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=
+, initial-scale=1.0">
+  <title>선택자</title>
+
+  <style>
+  /* body>p:first-of-type{color:red;}
+  body>p:nth-of-type(2){color:green;} */
+
+    /* div :not(p){color: red;} */
+/* 
+p:only-child{color: red;} */
+/* 
+p:only-of-type{color:red;} */
+/* p:nth-last-child(3){color:red;}
+p::selection{background-color: yellow;} */
+
+p{color:red;}
+p:nth-child(2){color:blue;}
+.first{color:green;}
+#one{color:yellow;}
+
+  </style>
+
+</head>
+<body>
+
+  <H1>제목태그</H1>
+  <p class="first" id="one" style="color:pink;" !important>문단태그</p>
+  <h2>제목태그</h2>
+  <p>문단태그</p>
+  <p>문단태그</p>
+  <p>문단태그</p>
+  <p>문단태그</p>
+<div>
+    <p>문단태그</p>
+</div>
+<div>
+    <p>문단태그</p>
+    <span>인라인태그</span>
+</div>
+
+</body>
+</html>
