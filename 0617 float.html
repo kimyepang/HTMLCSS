@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>position</title>
+
+<style>
+.parent{height: 70px;}
+.parent, .parent1{width: 1200px; margin: 0 auto;border: 1px solid ; position: relative; height:100px; background-color: yellow;}
+.parent>div:first-child{position: absolute; left:0;}
+.parent>div:nth-child(2){position: absolute; right:0;}
+
+/* .parent1{overflow: hidden;} */
+.parent1>div:first-child{float: left;}
+.parent1>div:last-child{float: right;}
+</style>
+
+</head>
+<div>
+  
+  <div class="parent">
+  <div>left<br>left<br>left</div>
+  <div>right</div>
+  </div>
+
+  <div class="parent1">
+  <div>left<br>left<br>left</div>
+    <div>
+    right</div>
+  </div>
+
+
+</body>
+</html>

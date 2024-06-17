@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>float</title>
+
+<style>
+
+.parent{width: 1200px; margin: 0 auto; border: 1px solid ; background-color: yellow;}
+
+.parent{overflow: hidden;}
+.parent>div:first-child{float: left;}
+.parent>div:last-child{float: right;}
+
+.parent1{border: 1px solid;width: 200px;}
+.parent2{border: 1px solid;width: 200px;}
+
+.parent1>div{float: left;}
+.parent1{overflow: hidden; margin: 0 auto;}
+
+.parent2>div:first-child{position:absolute; left:0;}
+.parent2>div:nth-child(2){position:absolute; left: 30px;}
+.parent2>div:last-child{position:absolute; left: 60px;}
+.parent2{height:30px; margin: 0 auto;}
+</style>
+
+</head>
+<div>
+  
+  <div class="parent">
+   <div>left<br>left<br>left</div>
+   <div>right</div>
+  </div>
+
+  <div class="parent1">
+   <div>left왼쪽</div>
+   <div>center</div>
+   <div>right</div>
+   </div>
+  
+  <div class="parent2">
+   <div>left왼쪽</div>
+   <div>center</div>
+   <div>right</div>
+   </div>
+  
+
+
+</body>
+</html>
