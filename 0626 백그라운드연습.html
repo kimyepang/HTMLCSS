@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+
+div.con{width: 1480px; height: 500px; margin: 0 auto; }
+
+div.con>div{width: 171px;height:100%; float: left; border-radius: 10px; background-size: cover;
+margin-left: calc((1480px - (171px * 8))/8); position: relative;}
+
+div.con div::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  position: absolute;
+  left: 0; top: 0;
+  border-radius: 10px;
+}
+
+.cg1{background: url(images/bg_category_1.jpg) center no-repeat;}
+.cg2{background: url(images/bg_category_2.jpg) center no-repeat;}
+.cg3{background: url(images/bg_category_4.jpg) center  no-repeat;}
+.cg4{background: url(images/bg_category_5.jpg) left no-repeat;}
+.cg5{background: url(images/bg_category_6.jpg) center no-repeat;}
+.cg6{background: url(images/bg_category_3.jpg) right no-repeat;}
+.cg7{background: url(images/bg_category_7.jpg) right no-repeat;}
+.cg8{background: url(images/bg_category_8.jpg) right no-repeat;}
+
+p{font-size: 24px; color: white; text-align: center; margin-top: 225px; font-weight: bold;}
+
+@font-face {
+  font-family:arita ;
+  src: url(webfonts/Arita-buriSB.otf) format(opentype);
+}
+
+div.text{width: 400px; margin: 0 auto;}
+h1{font-family: arita;}
+
+</style>
+
+
+</head>
+<body>
+<div class="text">
+  <h1>노랑풍선이 만드는 여행</h1>
+</div>
+
+<div class="con">
+  <div class="cg1"><p>Package</p></div>
+    <div class="cg2"><p>Honeymoon</p></div>
+  <div class="cg3"><p>Golf<br>& Theme</p></div>
+  <div class="cg4"><p>Air Ticket</p></div>
+  <div class="cg5"><p>Hotel</p></div>
+  <div class="cg6"><p>Tour<br>& Ticket</p></div>
+  <div class="cg7"><p>Domestic</p></div>
+  <div class="cg8"><p>Incentive</p></div>
+  </div>
+</div>
+
+
+</body>
+</html>
