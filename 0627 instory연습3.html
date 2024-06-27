@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+
+
+<style>
+
+*{margin: 0; padding: 0;}
+body{background-color: #d3222a;}
+/* .wrapper{width: 1000px;margin: 0 auto;} */
+.wrapper{}
+.top{overflow: hidden; width: 1000px; margin: 0 auto;}
+.top ul{float: right; list-style: none;}
+.top ul li{float: left;}
+.top ul li a{color: #fff; text-decoration: none; line-height: 40px; font-size: 12px;}
+.top ul li a::after{content:"|"; padding: 0 10px; }
+.top ul li:last-child a:after{content:"";}
+
+.pattern{background-image: url(images/pattern.gif); height: 82px; background-repeat: repeat;}
+.pattern>div{width: 1000px;margin: 0 auto;}
+
+.main>div{float: left; position: relative;}
+.main{overflow:hidden; height: 625px;width: 1000px;margin: 0 auto;}
+.main>div:last-child{background-image: url(images/index_main_02.gif); width: 514px;height: 100%;}
+.main>div p{font-size: 24px; color:#fff; font-weight: bold;}
+.main>div ul{position: absolute; top:220px; left:40px; list-style: none;}
+.main>div ul a{color: #000; text-decoration: none; text-transform: capitalize;}
+
+
+.foot{background-color: white; height: 100px; clear:left;}
+.foot>div{width: 1000px;margin: 0 auto; text-align: center; line-height: 100px;}
+
+</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+<div class="top">
+
+<ul>
+
+<li><a href="#">회원가입</a></li>
+<li><a href="#">로그인</a></li>
+<li><a href="#">JAPANESE</a></li>
+<li><a href="#">CHINESE</a></li>
+<li><a href="#">ITALIAN</a></li>
+
+</ul>
+</div>
+
+<div class="pattern"><div class="pattern_inner"><img src="images/index_pattern.gif" alt=""></div></div>
+
+<div class="main">
+
+  <div><img src="images/index_main_01.gif" alt="">
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Industry</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Product</a></li>
+      <li><a href="#">Illustrator</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  
+  </div>
+
+
+  <div><p>Home 메인 페이지입니다</p></div>
+</div>
+
+<div class="foot"><div class="foot_inner"><img src="images/copyright.gif" alt=""></div></div>
+
+
+</div>
+
+</body>
+</html>
