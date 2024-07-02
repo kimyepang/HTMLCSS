@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+
+.clearfix::before, .clearfix::after{
+      content:"";
+      display: block;
+    }
+    .clearfix::after{clear:both;}
+
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+.top{width: 1348px;height: 84px;margin: 50px auto;text-align: center;}
+
+p{font-family: noto; font-size: 16px;}
+
+@font-face {
+  font-family: noto;
+  src: url(webfonts/NotoSans-Light.woff) format("woff");
+}
+
+@font-face {
+  font-family: play;
+  src: url(webfonts/Play-Bold.ttf) format(truetype);
+}
+
+section{width: 1280px;margin: 0 auto;}
+
+.top>li>h1{font-family: play;}
+.left>li>div>h1{font-family: play;}
+h1,p{letter-spacing: -1px;}
+
+.left{float: left; width: 680px;}
+.left>li{float: left;}
+.left>li:first-child{width: 340px;height: 550px; background-image: url(images/pr_img1.jpg);margin-top: -30px; }
+.left>li:nth-child(2){width: 340px;height: 550px;background-image: url(images/pr_img2.jpg); }
+.left>li>div{color: #fff; width: 240px; margin-top: 300px; margin-left: 50px;}
+.left>li>div>p{width: 240px; margin-bottom: 36px;}
+.left>li>div>h1{font-size: 50px; 240px; height: 75px;}
+
+.left>li{cursor: pointer;}
+.right>li>div{cursor: pointer;}
+
+
+
+.right{float: right;}
+.right>li{background-color: #f0f0f0; width: 265px;height: 265px; float: left; margin: 0 22px 20px 0; position: relative; padding: 40px 30px;box-sizing: border-box;}
+.right>div{width: 211px;}
+.right>li>div>h1{font-weight: normal; margin-bottom: 16px;font-family: noto; font-size: 25px;}
+.right>li>div>h1>span{font-weight: bold; }
+.right>li>div>p{width: 211px; margin-bottom: 26px;}
+.right>li>div>img{width: 57px;height: 50px;}
+
+.next{transition: all 0.5s;}
+.left li{transition: all 0.5s; background-position: center; background-size: 100%;}
+.right li:hover .next{transform: translateX(40px);}
+.left li:hover{background-size: 120%;}
+.left li:hover .next{transform: translateX(40px);}
+
+
+
+
+</style>
+</head>
+<body>  
+
+<ul class="top">
+<li>
+  <h1>PR Center</h1>
+  <p>세상에 없던 신기술을 개척하는 기업,극동건설이 기술의 진보를 선도합니다</p>
+</li>
+</ul>
+
+<section class="clearfix">
+
+<ul class="left clearfix">
+
+<li>
+  <div>
+    <h1>극동뉴스</h1>
+    <p>극동건설의 다양한 소식을 가장 빠르게 전달해드립니다.</p>
+    <p class="next"><img src="images/next_bar_wh.png" alt=""></p>
+  </div>
+</li>
+
+<li>
+<div>
+  <h1>R&D</h1>
+  <p>끊임없는 신기술 개발과 혁신으로 극동건설이 건축기술의 진보를 위해 노력하고 있습니다</p>
+  <p class="next"><img src="images/next_bar_wh.png" alt=""></p>
+</div>
+</li>
+
+</ul>
+
+
+<ul class="right">
+
+  <li>
+    <div>
+      <h1>언론속의<br><span>극동</span></h1>
+      <p>언론에 소개되는 극동의 소식을 안내해드립니다.</p>
+      <p class="next"><img src="images/next_bar_bk.png" alt=""></p>
+
+      
+    <span class="line line-top"></span>
+    <span class="line line-right"></span>
+    <span class="line line-bottom"></span>
+    <span class="line line-left"></span>
+    </div>
+  </li>
+
+  <li>
+    <div>
+      <h1>입주고객<br><span>A/S안내</span></h1>
+      <p>스타클래스 입주 후 A/S 신청에 대한 안내 입니다. </p>
+      <p class="next"><img src="images/next_bar_bk.png" alt=""></p>
+
+      
+    <span class="line line-top"></span>
+    <span class="line line-right"></span>
+    <span class="line line-bottom"></span>
+    <span class="line line-left"></span>
+    </div>
+  </li>
+
+<Br>
+  <li>
+    <div>
+      <h1>극동건설<br><span>인재채용</span></h1>
+      <p>극동건설과 함께 성장해 나갈 인재를 모집합니다</p>
+      <p class="next"><img src="images/next_bar_bk.png" alt=""></p>
+
+      
+    <span class="line line-top"></span>
+    <span class="line line-right"></span>
+    <span class="line line-bottom"></span>
+    <span class="line line-left"></span>
+    </div>
+  
+  </li>
+
+
+  <li>
+    <div>
+      <h1>기업<br><span>홍보영상</span></h1>
+      <p>극동건설의 다양한 홍보영상을 소개합니다. </p>
+      <p class="next"><img src="images/next_bar_bk.png" alt=""></p>
+
+      
+    <span class="line line-top"></span>
+    <span class="line line-right"></span>
+    <span class="line line-bottom"></span>
+    <span class="line line-left"></span>
+    </div>
+  
+  </li>
+
+
+
+</ul>
+
+
+
+</section>
+
+
+
+
+
+</body>
+</html>
