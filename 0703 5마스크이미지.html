@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+
+*{margin: 0; padding: 0;}
+
+ul{width: 367px;}
+
+li{overflow: hidden; width: 367px; position: relative; cursor: pointer;}
+
+h1{float: left;}
+div{float: right;overflow: hidden; height: 72px;}
+div>p{float: left;padding: 5px; }
+
+li:hover p{color: #be8226;}
+li:first-child h1{width: 72px;height: 72px;background-color: #000; mask-image: url(images/ico_business_item01.svg); mask-repeat: no-repeat;}
+li:first-child:hover h1{width: 72px;height: 72px;background-color: #be8226; mask-image: url(images/ico_business_item01.svg); mask-repeat: no-repeat;}
+
+li:nth-child(2) h1{width: 72px;height: 72px;background-color: #000; mask-image: url(images/ico_business_item02.svg); mask-repeat: no-repeat;}
+li:nth-child(2):hover h1{width: 72px;height: 72px;background-color: #be8226; mask-image: url(images/ico_business_item02.svg); mask-repeat: no-repeat;}
+
+li:nth-child(3) h1{width: 72px;height: 72px;background-color: #000; mask-image: url(images/ico_business_item03.svg); mask-repeat: no-repeat;}
+li:nth-child(3):hover h1{width: 72px;height: 72px;background-color: #be8226; mask-image: url(images/ico_business_item03.svg); mask-repeat: no-repeat;}
+
+li:nth-child(4) h1{width: 72px;height: 72px;background-color: #000; mask-image: url(images/ico_business_item04.svg); mask-repeat: no-repeat;}
+li:nth-child(4):hover h1{width: 72px;height: 72px;background-color: #be8226; mask-image: url(images/ico_business_item04.svg); mask-repeat: no-repeat;}
+
+li:nth-child(5) h1{width: 72px;height: 72px;background-color: #000; mask-image: url(images/ico_business_item05.svg); mask-repeat: no-repeat;}
+li:nth-child(5):hover h1{width: 72px;height: 72px;background-color: #be8226; mask-image: url(images/ico_business_item05.svg); mask-repeat: no-repeat;}
+
+li:nth-child(6) h1{width: 72px;height: 72px;background-color: #000; mask-image: url(images/ico_business_item06.svg); mask-repeat: no-repeat;}
+li:nth-child(6):hover h1{width: 72px;height: 72px;background-color: #be8226; mask-image: url(images/ico_business_item06.svg); mask-repeat: no-repeat;}
+
+
+
+ul li::after{content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 1px;}
+
+</style>
+
+</head>
+<body>
+  
+<p></p>
+
+  <ul>
+    <li>
+      <h1></h1>
+      <h1></h1>
+
+      <div>
+        <p>건축<span><img src="images/ico_circle_arrow_active.png" alt=""></span></p>
+       
+      </div>
+    </li>
+    <li>
+      <h1></h1>
+
+      <div>
+        <p>선박·해양플랜트<span><img src="images/ico_circle_arrow_active.png" alt=""></span></p>
+       
+      </div>
+    </li>
+    <li>
+      <h1></h1>
+
+      <div>
+        <p>플랜트<span><img src="images/ico_circle_arrow_active.png" alt=""></span></p>
+       
+      </div>
+    </li>
+    <li>
+      <h1></h1>
+
+      <div>
+        <p>자동차<span><img src="images/ico_circle_arrow_active.png" alt=""></span></p>
+       
+      </div>
+    </li>
+    <li>
+      <h1></h1>
+
+      <div>
+        <p>전자·가전·전기</p>
+        <p><img src="images/ico_circle_arrow_active.png" alt=""></p>
+       
+      </div>
+    </li>
+    <li>
+      <h1></h1>
+
+      <div>
+        <p>산업 기타</p>
+        <p><img src="images/ico_circle_arrow_active.png" alt=""></p>
+       
+      </div>
+    </li>
+
+
+
+
+
+  </ul>
+
+
+</body>
+</html>

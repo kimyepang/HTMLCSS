@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+
+  <style>
+p{width: 400px;height: 300px; position: relative; }
+p img{width: 100%;height: 100%;object-fit: cover;transition: 0.5s;}
+
+p::after{content:url(images/ppdd_shadow.png);position: absolute; left: 50%; transform: translate(-50%,100%) scale(0); bottom: 0; width: 299px; height: 60px;transition: 0.5s;}
+
+p:hover::after{transform: translate(-50%,20%) scale(0.8);}
+p:hover img{transform: translatey(-40px);}
+  </style>
+</head>
+<body>
+
+
+<p><img src="images/NK0010006_Image_middle1.png" alt=""></p>
+
+  
+</body>
+</html>
