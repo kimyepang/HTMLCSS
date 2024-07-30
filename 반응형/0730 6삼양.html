@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style:none;}
+    a{text-decoration: none;}
+    ul.cardList{width: 100%; max-width: 1600px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center;}
+
+    @font-face {
+  font-family: noto;
+  src: url(images/NotoSansKR-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: samyang;
+  src: url(images/SYFotfBo00.woff2) format("woff2");
+}
+
+
+    ul.cardList li{flex: 1 0 20%; height: 360px;transition: 0.5s; position: relative; background-repeat: no-repeat; overflow: hidden;}
+    ul.cardList li:nth-child(1) .bg{background-image: url(images/sy_pc1.jpg);}
+    ul.cardList li:nth-child(2) .bg{background-image: url(images/sy_pc2.png);}
+    ul.cardList li:nth-child(3) .bg{background-image: url(images/sy_pc3.jpg);}
+    ul.cardList li:nth-child(4) .bg{background-image: url(images/sy_pc4.jpg);}
+
+    ul.cardList li a{display: block; width: 100%;height: 100%;}
+
+    ul.cardList li a:after{content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0;}
+    ul.cardList li:nth-child(1) a:after{background-color: rgba(0,163,241,0.84);}
+    ul.cardList li:nth-child(2) a:after{background-color: rgba(219,92,41,0.79);}
+    ul.cardList li:nth-child(3) a:after{background-color: rgba(139,185,6,0.76);}
+    ul.cardList li:nth-child(4) a:after{background-color: rgba(0,163,241,0.64);}
+    ul.cardList li:hover a:after{opacity: 1;}
+
+    ul.cardList li a{color: #fff; padding: 20px; display: block;font-family: noto;}
+    ul.cardList li a p:first-child{font-size: 32px; font-family: samyang;}
+    ul.cardList li img{margin-top: 10px;}
+
+    .text{width: 980px; margin: 50px auto; display: flex; justify-content: space-between;word-break: keep-all; color: #3b3b3b;}
+.text li:nth-child(1){font-size: 42px; font-weight: bold; font-family: samyang;}
+.text li:nth-child(2){font-size: 19px; width: 370px; line-height: 35px; letter-spacing: -1px; font-family: noto;}
+
+ul.cardList li a h2{position: relative; z-index: 1;}
+ul.cardList li .bg{position: absolute; left: 0; top: 0; width: 100%; height: 100%;background-size: cover; transform: scale(1); transition: 0.5s;}
+ul.cardList li:hover .bg{transform: scale(1.2);}
+
+ul.cardList li a p{opacity: 0; transition: 0.5s; z-index: 1; position: relative; transform: translateY(10px); margin-top: 10px; font-size: 19px;}
+ul.cardList li:hover a p{opacity: 1; transform: translateY(0);}
+
+@media screen and (max-width:1530px) {
+  ul.cardList{max-width: 1280px;}
+  ul.cardList li:hover a:after{opacity: 0;}
+  ul.cardList li:hover a{transform: scale(1);}
+}
+@media screen and (max-width:1024px) {
+  ul.cardList{width: 90%;}
+  ul.cardList li{flex: 1 0 50%; height: 250px;}
+  ul.cardList li:nth-child(1) .bg{background-image: url(images/sy_pc1.jpg);}
+    ul.cardList li:nth-child(2) .bg{background-image: url(images/sy_mb2.png);}
+    ul.cardList li:nth-child(3) .bg{background-image: url(images/sy_mb3.jpg);}
+    ul.cardList li:nth-child(4) .bg{background-image: url(images/sy_mb4.jpg);}
+
+    .text{flex-wrap: wrap; width: 90%;}
+  .text li:nth-child(2){width: 100%; padding-top: 10px;}
+}
+@media screen and (max-width:768px) {
+  ul.cardList{width: 90%;}
+  ul.cardList li{flex: 1 0 100%; height: 250px;}
+
+}
+
+
+  </style>
+</head>
+<body>
+
+  <ul class="text">
+    <li><p>삼양은 언제나<br>
+      당신의 곁에 있습니다.</p></li>
+    <li> 스페셜티 사업 및 글로벌 시장확대를 위해
+      화학, 식품, 의약바이오, 패키징 사업으로
+      미래성장동력을 만들어갑니다.</li>
+  </ul>
+
+  <ul class="cardList">
+    <li>
+      <a href="#">
+        <h2>화학</h2>
+        <p>언제나 편리하게</p>
+        <p><img src="images/main_sec01_card_list_arrow.svg" alt="arrow"></p>
+        <div class="bg"></div>
+      </a>
+
+    </li>
+    <li>
+      <a href="#">
+        <h2>식품</h2>
+        <p>누구나 풍요롭게</p>
+        <p><img src="images/main_sec01_card_list_arrow.svg" alt="arrow"></p>
+        <div class="bg"></div>
+      </a>
+
+    </li>
+    <li>
+      <a href="#">
+        <h2>의약바이오</h2>
+        <p>오래도록 건강하게</p>
+        <p><img src="images/main_sec01_card_list_arrow.svg" alt="arrow"></p>
+        <div class="bg"></div>
+      </a>
+
+    </li>
+    <li>
+      <a href="#">
+        <h2>패키징</h2>
+        <p>어디서나 즐겁게</p>
+        <p><img src="images/main_sec01_card_list_arrow.svg" alt="arrow"></p>
+        <div class="bg"></div>
+      </a>
+
+    </li>
+  </ul>
+</body>
+</html>

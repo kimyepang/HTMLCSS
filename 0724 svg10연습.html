@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    section{position: relative;width: 500px;height: 500px;margin: 0 auto; }
+    section p{width: 100%;height: 100%;}
+    section p img{width: 100%; height: 100%; object-fit: cover; clip-path: url(#path1);}
+    section svg{position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+  </style>
+</head>
+<body>
+
+<section>
+  <p><img src="images/yuhan5.jpg" alt="p"></p>
+  
+  <svg>
+    <clipPath id="path1" clipPathUnits="objectBoundingBox">
+      <path d="M0.89,0.78c0.01,0.05-0.03,0.1-0.09,0.1l-0.11,0c-0.05,0-0.14,0.01-0.19,0.04L0.4,0.95c-0.05,0.02-0.1,0-0.12-0.06
+		L0.25,0.78C0.23,0.73,0.19,0.66,0.15,0.61L0.08,0.53C0.04,0.49,0.05,0.43,0.1,0.4l0.09-0.06C0.23,0.31,0.3,0.25,0.32,0.2l0.06-0.1
+		c0.03-0.05,0.09-0.06,0.13-0.02l0.09,0.07c0.04,0.03,0.12,0.07,0.18,0.08l0.11,0.02c0.05,0.01,0.08,0.06,0.06,0.11L0.9,0.47
+		C0.88,0.52,0.87,0.61,0.88,0.67L0.89,0.78z"/>
+    </clipPath>
+  </svg>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>daejeon</title>
+
+  <style>
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+
+.daejeon{width: 720px; overflow: hidden; margin: 50px auto; padding: 20px 0;}
+.daejeon li{width: calc(100% / 4); float: left;text-align: center;}
+.daejeon li a{display: block;}
+
+.daejeon li:first-child a p:last-child{background-image: url(images/bg_info_m01.png);}
+.daejeon li:nth-child(2) a p:last-child{background-image: url(images/bg_info_m02.png);}
+.daejeon li:nth-child(3) a p:last-child{background-image: url(images/bg_info_m03.png);}
+.daejeon li:nth-child(4) a p:last-child{background-image: url(images/bg_info_m04.png);}
+
+.daejeon li a p:last-child{width: 142px;height: 142px;margin: 20px auto 0;background-repeat: no-repeat;background-position:top; }
+
+.daejeon li:hover a p:last-child{background-position:bottom; animation: 1s ani alternate infinite linear}
+
+@keyframes ani {
+
+  0%,100%{transform: translateY(0); animation-timing-function: ease-in;}
+  50%{transform: translateY(10px); animation-timing-function: ease-out;}
+}
+
+
+  </style>
+
+</head>
+<body>
+  
+  <ul class="daejeon">
+
+    <li>
+      <a href="#">
+        <p>대전청년포털</p>
+        <p></p>
+      </a>
+    </li>
+
+
+    <li>
+      <a href="#">
+        <p>도시주택정보</p>
+        <p></p>
+      </a>
+    </li>
+
+
+    <li>
+      <a href="#">
+        <p>동물보호센터</p>
+        <p></p>
+      </a>
+    </li>
+
+
+    <li>
+      <a href="#">
+        <p>보건환경연구원</p>
+        <p></p>
+      </a>
+    </li>
+
+
+
+  </ul>
+
+
+</body>
+</html>

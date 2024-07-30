@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #333;}
+
+    @font-face {
+	font-family: 'Pretendard Variable';
+	font-weight: 45 920;
+	font-style: normal;
+	font-display: swap;
+	src: url('./woff2/PretendardVariable.woff2') format('woff2-variations');
+}
+
+
+.videowrap{width: 100%; height: 100vh;}
+.videowrap video{width: 100%; height: 100vh; object-fit: cover; 
+                position: absolute; left: 0; top: 0;}
+
+.videowrap::after{content: url(images/download.svg); width: 462px;height: 22px; position: absolute; z-index: 1; left: 50%; transform: translateX(-50%); top: 40px;}
+
+.menu{position: relative;position: absolute; left: 50%; transform: translateX(-50%); top: 100px; width:920px; padding: 0 180px;}
+.menu li{z-index: 1;}
+.menu>ul{display: flex; justify-content:space-between;position: relative;}
+.menu>ul>li>a{color: #fff; font:500 17px pretendard;}
+.menu .sub{position: absolute;left: 0;top: 21px; width: 100%; height: 210px;padding: 30px 0;
+  display: flex; flex-direction: column; flex-wrap: wrap;
+  opacity: 0;transition: 0.5s;}
+.menu .sub a{font: 400 17px pretendard; color: #fff; line-height: 70px;}
+
+.bg{position: absolute; left: 0; top: 51px; width: 1280px; height: 210px;background-color: rgba(0,0,0,0); transition: 0.5s;}
+
+.menu>ul>li:hover>.sub{opacity: 1;}
+.menu>ul:hover ~ .bg{background-color:rgba(0,0,0,0.5);}
+
+.text{padding: 120px 0; width: 1223px; margin: 0 auto; text-align: center;}
+.text p{font: 200 18px pretendard; line-height: 28px;}
+.text a{font: 200 15px pretendard; position: relative;}
+.text a::after{content: ""; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background-color: black;}
+.text a:hover::after{animation: underline 1s linear;}
+
+@keyframes underline {
+  0% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  50% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  51% {
+    transform-origin: left;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+ 
+#grid{display: grid;width: 1772px;height: 1680px;margin: 0 auto;
+grid-template-columns: 590px 296px 296px 294px 296px ; grid-template-rows: repeat(4, 1fr);}
+
+#grid div{position: relative;}
+#grid div img{width: 100%;height: 100%;object-fit: cover; position: relative;}
+.ssg1{grid-column: 1; grid-row: 1 / span 2;}
+.ssg2{grid-column: 2 / span 3; grid-row: 1;}
+.ssg3{grid-column: 5; grid-row: 1;}
+.ssg4{grid-column: 1; grid-row: 3;}
+.ssg5{grid-column: 2 / span 2; grid-row: 2 / span 2;}
+.ssg6{grid-column: 4 / span 2;}
+.ssg7{grid-column: 4 / span 2;}
+.ssg8{grid-column: 1 / span 2;}
+.ssg9{grid-column: 3;}
+.ssg10{grid-column: 4 / span 2;}
+
+#grid div:nth-child(2)::after,
+#grid div:nth-child(3)::after,
+#grid div:nth-child(7)::after,
+#grid div:nth-child(8)::after,
+#grid div:nth-child(9)::after
+{content: "";position: absolute; background: rgb(0,0,0,0.1); width: 100%;height: 100%;left: 0;top: 0; transition: 0.5s;}
+#grid div:hover::after{background: rgb(0,0,0,0.5);}
+
+#grid div:nth-child(1),
+#grid div:nth-child(4),
+#grid div:nth-child(5),
+#grid div:nth-child(6),
+#grid div:nth-child(10)
+{transform: scale(1); overflow: hidden;}
+#grid div:nth-child(1) img,
+#grid div:nth-child(4) img,
+#grid div:nth-child(5) img,
+#grid div:nth-child(6) img,
+#grid div:nth-child(10) img
+{transition: 0.5s;}
+#grid div:nth-child(1):hover img,
+#grid div:nth-child(4):hover img,
+#grid div:nth-child(5):hover img,
+#grid div:nth-child(6):hover img,
+#grid div:nth-child(10):hover img{transform: scale(1.1);}
+
+.brand-name{font-size: 27px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); color: #fff; letter-spacing: 5px; text-align: center; z-index: 1;}
+
+.banner{width: 100%; height: 670px; margin-top:80px; overflow: hidden;}
+.banner img{width: 100%; height: 100%; object-fit: cover;transform: scale(1); transition: 0.8s ease-in-out;}
+.banner:hover img{transform: scale(1.1);}
+
+.news{width: 100%; height: 1184px;display: flex;}
+.news>div{padding: 120px 53px;}
+.news .left{width: 50%;}
+.news .right{width: 50%; background: #f6f4f2;}
+
+.news .title{margin-bottom: 46px; position: relative;}
+.news .title::after{content: ""; position: absolute;width: 50px;height: 1px; background-color: #000; left: 0; bottom: -5px; }
+
+.news .imgbox{width:100%;height: 540px; overflow: hidden;}
+.news .imgbox img{width: 100%;height: 100%;object-fit: cover;transform: scale(1); transition: 0.5s ease-in-out;}
+.news .imgbox img:hover{transform: scale(1.1);}
+
+.news h2{font: 600 32px pretendard; margin-top: 50px;}
+.news p{font:200 18px pretendard; padding-top: 25px; line-height: 30px;}
+.news .underline{display: inline-block;margin-top: 60px;position: relative;}
+.news .underline::after{content: "";position: absolute;height: 1px;width: 100%;background-color: #000; left: 0; bottom: -2px;}
+.news .underline:hover::after{animation: underline 1s ease-in-out;}
+
+.logo{width: 100%;height: 118px; position: relative;}
+.logo::after{content: url(images/logo2.svg); left: 50%; transform: translateX(-50%); position: absolute; padding: 50px 0 20px;}
+.link{display: flex; flex-direction: row; justify-content: center;align-items: center; gap: 40px;padding: 23px 0; border-bottom: 1px solid #ddd;}
+.link a{font: 400 15px pretendard; position: relative;}
+.link a::after{content: "";position: absolute;height: 1px;width: 0;background-color: #000; left: 0; bottom: -2px; transition: 1s;}
+.link a:hover::after{width: 100%;}
+.copyright{padding: 22px 0; font:200 13px pretendard; text-align: center; color:  #999999;}
+
+</style>
+</head>
+<body>
+  
+<header>
+<div class="top">
+
+<div class="videowrap">
+  <video autoplay muted loop>
+    <source src="https://img.sikorea.co.kr/files/upload2/mainVisual/202407/UGG_30초_일반화질_가로형_1721177543496.mp4" type="video/mp4">
+  </video>
+</div>
+
+<div class="menu">
+  <ul>
+    <li>
+      <a href="#">COMPANY</a>
+        <ul class="sub">
+          <li><a href="#">신세계그룹</a></li>
+          <li><a href="#">회사소개</a></li>
+          <li><a href="#">비전</a></li>
+          <li><a href="#">연혁</a></li>
+          <li><a href="#">위치</a></li>
+        </ul>
+    </li>
+    <li>
+      <a href="#">BUSINESS</a>
+        <ul class="sub">
+          <li><a href="#">패션</a></li>
+          <li><a href="#">뷰티</a></li>
+          <li><a href="#">라이프스타일</a></li>
+          <li><a href="#">디지털 플랫폼</a></li>
+          <li><a href="#">라이선스</a></li>
+          <li><a href="#">비즈니스</a></li>
+        </ul>
+    </li>
+    <li>
+      <a href="#">INVESTORS</a>
+        <ul class="sub">
+          <li><a href="#">주주구성</a></li>
+          <li><a href="#">이사회구성</a></li>
+          <li><a href="#">재무정보</a></li>
+          <li><a href="#">공고 및 IR정보</a></li>
+          <li><a href="#">주가정보</a></li>
+          <li><a href="#">주주정책</a></li>
+        </ul>
+    </li>
+    <li>
+      <a href="#">RESPONSIBILITY</a>
+      <ul class="sub">
+          <li><a href="#">CSR경영</a></li>
+          <li><a href="#">ESG경영</a></li>
+          <li><a href="#">상생경영</a></li>
+          <li><a href="#">사회공헌활동</a></li>
+          <li><a href="#">상담 및 제보</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">PEOPLE</a>
+      <ul class="sub">
+          <li><a href="#">SI 팀</a></li>
+          <li><a href="#">SI 파트너</a></li>
+          <li><a href="#">채용</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">NEWS</a>
+      <ul class="sub">
+          <li><a href="#">뉴스</a></li>
+      </ul>
+    </li>
+  
+  </ul>
+  <div class="bg"></div>
+</div>
+
+</div>
+</header>
+
+<main>
+
+  <div class="text">
+    <p>신세계인터내셔날은 고객의 행복한 라이프 스타일을 디자인 하는 기업으로</p>
+    <p>최고의 고객 경험과 가치를 전달하고자 끊임없이 노력하고 있습니다.</p>
+    <p>디지털, 상품, 고객 경험의 지속적인 혁신과 창조를 통해 글로벌 NO.1 기업으로 성장해 나가겠습니다.</p>
+    <br>  <br>  
+    <a class="underline" href="#">READ MORE</a>
+  </div>
+
+<div id="grid">
+<div class="ssg1"><img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202403/brand_banner_a_1694479936563 복사_1711607938212.jpg" alt="ssg1"></div>
+<div class="ssg2">
+  <img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202309/brand_banner_fashion_1694479958917.jpg" alt="ssg2">
+  <p class="brand-name">FASHION</p>
+</div>
+<div class="ssg3"><img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202309/brand_banner_lifestyle_1694479966981.jpg" alt="ssg3">
+  <P class="brand-name">LIFESTYLE</P>
+</div>
+<div class="ssg4"><img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202403/brand_banner_b_1694479938377 복사_1711607957681.jpg" alt="ssg4"></div>
+<div class="ssg5"><img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202403/brand_banner_c_1694479940961 복사_1711607961371.jpg" alt="ssg5"></div>
+<div class="ssg6"><img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202403/brand_banner_d_1694479943555 복사_1711607964019.jpg" alt="ssg6"></div>
+<div class="ssg7">
+  <img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202309/brand_banner_beauty_1694479963654.jpg" alt="ssg7">
+  <P class="brand-name">BEAUTY</P>
+</div>
+<div class="ssg8">
+  <img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202309/brand_banner_digital_1694479969978.jpg" alt="ssg8">
+  <P class="brand-name">DIGITAL PLATFORM</P>
+</div>
+<div class="ssg9">
+  <img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202309/brand_banner_license_1694479972834.jpg" alt="ssg9">
+  <P class="brand-name">LICENSE<BR>BUSINESS</P>
+  </div>
+<div class="ssg10"><img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202403/brand_banner_e_1694479946259 복사_1711607966695.jpg" alt="ssg10"></div>
+  </div>
+
+
+<div class="banner">
+  <a href="#"><img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202404/SIKOREA_%EB%B8%8C%EB%9E%9C%EB%93%9C%20%ED%95%98%EB%8B%A8%EB%B0%B0%EB%84%88_3840x1340_1712210974928.jpg" alt="banner"></a>
+</div>
+
+<div class="news">
+  <div class="left">
+    <h1 class="title">NEWS</h1>
+    <div class="imgbox"><a href="#"><img src="http://img.sikorea.co.kr/files/editor/media/202407/[%EB%94%A5%ED%8B%B0%ED%81%AC]%20%EC%84%B1%EC%88%98%20%EC%8D%B8%EB%A8%B8%20%ED%8C%9D%EC%97%85%EC%8A%A4%ED%86%A0%EC%96%B4_%EC%99%B8%EA%B4%80_1720744800172.jpg" alt="leftimg"></a></div>
+    <h2>[딥티크] 성수동에 썸머 팝업스토어 오픈</h2>
+    <p>신세계인터내셔날의 프랑스 럭셔리 니치 퍼퓸 브랜드 딥티크(Diptyque)가 다음달 25일까지 한 달여간 성수동에서 아이스크림 샵 콘셉트의 썸머 팝업스토어를 운영한다고 12일 밝혔다. 서울 도심 한복판에서 지중해 휴양지를 방문한 듯 오감을 만족시킬 수 있는 공간을 경험할 수 있다.</p>
+    <a class="underline" href="#">READ MORE</a>
+  </div>
+
+  <div class="right">
+    <h1 class="title">PEOPLE</h1>
+    <div class="imgbox"><a href="#"><img src="https://img.sikorea.co.kr/files/upload2/mainSubImg/202309/02_%EC%83%81%EC%84%B8%EC%B6%94%EA%B0%80_%EC%9D%B4%EC%86%A1%EC%97%B0%20%EC%8B%A4%EC%9E%A5_02_1694482030828.jpg" alt="rightimg"></a></div>
+    <h2>트렌디한 아이템을 VOV 고유의 아이덴티티에<Br>
+      맞게 디자인하다</h2>
+    <p>VOV는 유니크한 아이덴티티에 맞게 트렌디한 아이템을 디자인합니다.
+      앞으로도 VOV가 고객과 소통하며 우수한 브랜드로 성장하길 바랍니다.</p>
+    <a class="underline" href="#">READ MORE</a>
+  </div>
+</div>
+
+</main>
+
+<footer>
+<div class="logo"></div>
+<ul class="link">
+  <li><a href="#">CONTACT</a></li>
+  <li><a href="#">NOTICE</a></li>
+  <li><a href="#">운영관리방침</a></li>
+  <li><a href="#">개인정보처리방침</a></li>
+  <li><a href="#">PARTNER SUPPORT</a></li>
+  <li><a href="#">SITEMAP</a></li>
+  <li><a href="#">FAMILYSITE</a></li>
+</ul>
+<p class="copyright">
+  <span>COPYRIGHT 2023 (C) BY SHINSEGAE INTERNATIONAL. ALL RIGHTS RESERVED</span>
+</p>
+
+
+</footer>
+
+</body>
+</html>

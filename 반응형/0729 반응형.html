@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale:1.0, maximum-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #333;}
+
+    @font-face {
+      font-family: kakaobig;
+      src: url(images/KakaoBig-Regular-v1.0.woff2) format("woff2");
+    }
+
+.service{margin: 0 auto; max-width: 1300px; width: 90%;}
+.service h1 img{width: 72px;height: 72px; vertical-align: middle;}
+.service h1{font-size: 48px; font-weight: normal; font-family: kakaobig; height: 72px; line-height: 72px;}
+.service h1 strong{margin-left: 20px;}
+
+.service .menu{display: flex; flex-wrap: wrap;gap: 20px; width: 100%; margin: 20px auto;}
+.service .menu h2{font-size: 30px; font-family: kakaobig; font-weight: normal;}
+.service .menu>li{display: flex;padding: 50px 40px; justify-content: space-between;  background-color: #f3f3f3; border-radius: 20px; flex:1 1 45%; box-sizing: border-box; align-items: center;}
+.service .menu .sub{display: flex; justify-content: flex-end;}
+.service .menu .sub img{width: 56px;height: 56px; margin-left: 8px;}
+
+
+@media screen and (max-width:1439px) {
+  .service{width: 948px;}
+  .service h1{font-size: 32px;}
+  .service h1 img{width: 48px; height: 48px;}
+}
+@media screen and (max-width:948px) {
+  .service{width: 700px;}
+  .service h1{font-size: 18px;}
+  .service h1 img{display: none;}
+  .service .sub li:nth-child(3){display: none;}
+}
+@media screen and (max-width:767px) {
+  .service{width: 100%;padding: 14px; box-sizing: border-box;}
+  .service .menu>li{flex-direction: column;}
+  .service h1{font-size: 18px;}
+  .service h1 strong{margin-left: 0}
+}
+@media screen and (max-width:535px) {
+  .service h1{font-size: 16px;}
+  .service h1{word-break: keep-all;}
+  .service .menu>li{padding: 20px}
+}
+
+  </style>
+</head>
+<body>
+  <div class="service">
+      <h1>
+        <span><img src="images/ico_tit_service.gif" alt="title"></span>
+        <strong>더 나은 세상을 만드는 카카오 서비스</strong>
+      </h1>
+
+      <ul class="menu">
+      <li>
+        <h2>커뮤니케이션</h2>
+        <ul class="sub">
+          <li><a href="#"><img src="images/kakao1.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao1-2.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao1-3.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao4.svg" alt=""></a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <h2>비즈니스</h2>
+        <ul class="sub">
+          <li><a href="#"><img src="images/kakao2.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao2-2.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao2-3.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao4.svg" alt=""></a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <h2>일상편의</h2>
+        <ul class="sub">
+          <li><a href="#"><img src="images/kakao3.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao3-2.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao3-3.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao4.svg" alt=""></a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <h2>쇼핑</h2>
+        <ul class="sub">
+          <li><a href="#"><img src="images/kakao4.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao4-2.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao4-3.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao4.svg" alt=""></a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <h2>엔터테인먼트</h2>
+        <ul class="sub">
+          <li><a href="#"><img src="images/kakao5.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao5-2.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao5-3.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao4.svg" alt=""></a></li>
+        </ul>
+      </li>
+      
+      <li>
+        <h2>소셜임팩트</h2>
+        <ul class="sub">
+          <li><a href="#"><img src="images/kakao6.png" alt=""></a></li>
+          <li><a href="#"><img src="images/kakao4.svg" alt=""></a></li>
+        </ul>
+      </li>
+      
+
+    </ul>
+  </div>
+</body>
+</html>

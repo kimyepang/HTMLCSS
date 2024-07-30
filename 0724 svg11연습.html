@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    section{width: 600px;height: 600px; margin: 50px auto;}
+svg{width: 100%; height: 100%;}
+svg polygon{transform: scale(600); stroke-dasharray: 1000; stroke-dashoffset: 1000; animation: ani 2s infinite;}
+
+@keyframes ani {
+  0%{stroke-dashoffset: 1000;}
+  100%{stroke-dashoffset: 0;}
+
+}
+
+  </style>
+</head>
+<body>
+
+  <section>
+    <svg>
+      <polygon points="0.9,0.88 0.59,0.86 0.3,0.99 0.22,0.69 0.01,0.46 0.27,0.29 0.43,0.02 0.67,0.21 0.97,0.28 0.86,0.57 " style="fill:lightyellow;stroke:lightpink;stroke-width:3"/>
+    </svg>
+  </section>
+  
+</body>
+</html>

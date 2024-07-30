@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #000;}
+
+#wrap{width: 1348px;height: 358px; margin: 0 auto; padding: 45px 0; box-sizing: border-box;}
+
+@font-face {
+  font-family: degular;
+  src: url(webfonts/DegularDisplay-Medium.otf) format(opentype);
+}
+
+#wrap .con{width: 100%; height: 268px; margin: auto 0;}
+
+#wrap .con .left{width: 586px;height: 100%; float: left;}
+#wrap .con .left h1{font-family: degular;font-size: 135px;width: 100%; height: 190px; font-weight: normal; white-space: pre-wrap;}
+
+#wrap .con .right{width: 586px;height: 100%; float: right;}
+#wrap .con .right .menu>li{width: 100%; height: 71px;border-bottom: 1px solid; }
+#wrap .con .right .menu>li:first-child{border-top:1px solid;}
+#wrap .con .right .menu>li span{float: right;}
+
+#wrap .con .right .menu>li>a{font-size: 32px; font-family: degular; padding: 15px 0; display: block;}
+#wrap .con .right .sub{width: 100%;height: 0px; overflow: hidden; transition: 0.5s;}
+#wrap .con .right .sub>li{width: 410px;height: 100%;}
+#wrap .con .right .sub>li>p{width: 410px;height: 21px;;font-size: 14px; font-family: degular; color:#0000009c;display: block; padding-bottom: 30px;}
+
+#wrap .con .right .menu>li:hover .sub{height: 51px;}
+#wrap .con .right .menu>li span:nth-child(2){opacity: 0;;}
+#wrap .con .right .menu>li:hover{border-bottom: none;}
+#wrap .con .right .menu>li:hover span:nth-child(1){display: none;}
+#wrap .con .right .menu>li:hover span:nth-child(2){opacity: 1;}
+  </style>
+
+</head>
+<body>
+  
+<div id="wrap">
+
+<div class="con">
+
+  <div class="left">
+    <h1>Our Services</h1>
+  </div>
+  
+  <div class="right">
+  
+    <ul class="menu">
+  
+      <li>
+        <a href="#">UX/UI <span>+</span><span>-</span></a>
+          <ul class="sub">
+            <li><p>Concept Proposal / UX Planning /  UI Design</p></li>
+          </ul>
+      </li>
+  
+      <li>
+        <a href="#">Motion<span>+</span><span>-</span></a>
+          <ul class="sub">
+            <li><p>Scenario Planning / 2D Motion graphic Design / 3D Modeling & Animation / 3D VFX</p></li>
+          </ul>
+      </li>
+  
+      <li>
+        <a href="#">Production<span>+</span><span>-</span></a>
+          <ul class="sub">
+            <li><p>Pre-Production / Production / Post-Production</p></li>
+          </ul>
+      </li>
+      
+  </ul>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</body>
+</html>

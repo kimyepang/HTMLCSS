@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+#wrap{display: flex; flex-direction: row; justify-content: center; }
+.flex{display: flex; flex-direction: row; flex-wrap: wrap; font-size: 0; justify-content: space-between; align-content: space-between;}
+.flex div img{width: 200px; height: 200px; object-fit: cover;;}
+.container1{width: 420px; height: 420px;}
+.container2{width: 240px;height: 420px;  justify-content: center;}
+.container3{width: 420px; height: 420px;}
+.container4{width: 240px; height: 420px; justify-content: center;}
+.container1 div:first-child img{width: 420px; height: 200px;}
+.container2 div img{width: 200px;height: 420px;}
+.container3 div:nth-child(3) img{width: 420px; height: 200px;}
+.container4 div img{width: 200px;height: 420px;}
+
+.flex div{position: relative;}
+.flex>div:hover::before{content: ""; background-color: rgba(0,0,0,0.5); position: absolute; width:100%;height:100%;}
+
+
+  </style>
+</head>
+<body>
+
+
+    <div id="wrap">
+      <div class="flex container1">
+
+        <div>
+          <img src="images/review1.jpg" alt="">
+          <div class="info">
+            <h2>3박 4일 프라이빗 제주여행</h2>
+            <p>두모옴팡집</p>
+          </div>
+        </div>
+
+        <div><img src="images/review2.jpeg" alt=""></div>
+        <div><img src="images/review3.jpeg" alt=""></div>
+      </div>
+      <div class="flex container2">
+        <div><img src="images/review4.jpg" alt=""></div>
+      </div>
+      <div class="flex container3">
+        <div><img src="images/review5.JPG" alt=""></div>
+        <div><img src="images/review6.jpeg" alt=""></div>
+        <div><img src="images/review7.jpeg" alt=""></div>
+      </div>
+      <div class="flex container4">
+        <div><img src="images/review8.jpeg" alt=""></div>
+      </div>
+    </div>
+
+
+</body>
+</html>

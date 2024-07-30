@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+*{margin: 0; padding: 0;}
+
+#wrap{display: flex; width: 1200px; justify-content: space-between; margin: 50px auto;}
+#wrap>div{width: 240px;height: 360px; background-size: contain; color: #fff; margin: 0 auto;background-repeat: no-repeat;}
+#wrap>div:first-child{background-image: url(images/kbssportsworld1.png); }
+#wrap>div:nth-child(2){background-image: url(images/kbssportsworld2.png);}
+#wrap>div:nth-child(3){background-image: url(images/kbssportsworld3.png);}
+#wrap>div:nth-child(4){background-image: url(images/kbssportsworld4.png);}
+
+#wrap .text{width: 180px; margin: 0 auto; transform: translateY(30px); letter-spacing: -2px; font-weight: bold;}
+#wrap .text h1{font-size: 30px;}
+
+@media screen and (max-width:1200px) {
+  #wrap{width: 750px; flex-wrap: wrap; justify-content: flex-start;}
+
+}
+@media screen and (max-width:820px) {
+  #wrap{width: 640px;}
+  #wrap>div{width: 150px;height: 225px;}
+  #wrap .text{width: 90px;}
+}
+@media screen and (max-width:669px) {
+  #wrap{width: 470px; flex-wrap: wrap;}
+}
+@media screen and (max-width:590px) {
+  #wrap{width: 315px; flex-wrap: wrap;}
+  #wrap>div{width: 150px;height: 225px;}
+}
+
+  </style>
+</head>
+<body>
+
+<div id="wrap">
+  <div><div class="text">
+    <h1>수영</h1><p>#다이어트 #유산소 #재활</p>
+  </div></div>
+  <div><div class="text">
+    <h1>볼링</h1><p>#여가활동 #구기종목</p>
+  </div></div>
+  <div><div class="text">
+    <h1>헬스</h1><p>#다이어트 #체력증진 #근력운동</p>
+  </div></div>
+  <div><div class="text">
+    <h1>스피닝</h1><p>#단기다이어트 #유산소</p>
+  </div></div>
+</div>
+
+</body>
+</html>

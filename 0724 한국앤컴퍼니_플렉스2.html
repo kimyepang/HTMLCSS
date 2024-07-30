@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ㅏㅐ">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+
+@font-face {
+    font-family: "Hankook KR TTF";
+    src: url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.eot");
+    src: url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.svg#Hankook KR TTF")format("svg");
+}
+
+
+.content{width: 1180px; height: 1120px;;margin: 0 auto; font-size: 0;}
+.content>ul{display: flex; gap: 20px;}
+.content>ul li ul{display: flex; flex-direction:column; gap: 20px; }
+.content>ul li ul li{font-size: 24px; position: relative;overflow: hidden;}
+.content>ul li ul li p{position: absolute; bottom: 50px; color: #fff; padding-left: 30px;font-family: "Hankook KR TTF"; line-height: 34px;}
+.content>ul li:first-child li:first-child{width: 380px; height: 620px;}
+.content>ul li:first-child li:last-child{width: 380px; height: 480px;}
+.content>ul li:nth-child(2) li:first-child{width: 380px; height: 480px;}
+.content>ul li:nth-child(2) li:last-child{width: 380px; height: 620px;}
+.content>ul li:nth-child(3) li:first-child{width: 380px; height: 620px;}
+.content>ul li:nth-child(3) li:last-child{width: 380px; height: 480px;}
+.content>ul li img{transition: 0.5s; width: 100%;}
+.content>ul li img:hover{width: 120%;}
+  </style>
+</head>
+<body>
+  <div class="content">
+    <ul>
+      <li>
+        <ul>
+          <li><img src="images/hnc1.jpg" alt="hnc1"> <p>팬데믹 이전으로 부활한 CES 2024</p></li>
+          <li><img src="images/hnc4.jpg" alt="hnc4"> <p>지속 가능한 환경을 위한<br>지속 불가능한 규제</p></li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+            <li><img src="images/hnc2.jpg" alt="hnc2"> <p>닛산, 항상 도전한다</p></li>
+            <li><img src="images/hnc5.jpg" alt="hnc5"> <p>포뮬러 E 시즌 10 프리뷰</p></li>
+        </ul>
+      </li>
+      <li>
+        <ul>
+            <li><img src="images/hnc3.jpg" alt="hnc3"> <p>포뮬러 E 백스테이지</p></li>
+            <li><img src="images/hnc6.jpg" alt="hnc62"> <p>챗GPT 이후…<br>2024년 우리가 주목할 기술</p></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

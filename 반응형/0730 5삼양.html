@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samyang</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}    
+
+@font-face {
+  font-family: noto;
+  src: url(images/NotoSansKR-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: samyang;
+  src: url(images/SYFotfBo00.woff2) format("woff2");
+}
+
+ul.list{width: 100%;max-width: 1600px; display: flex; margin: 50px auto; color: #fff; font-family: samyang;}
+ul.list li{width: 400px;  height: 360px;background-repeat: no-repeat; font-size: 32px;}
+ul.list li:nth-child(1){background-image: url(images/sy_pc1.jpg);}
+ul.list li:nth-child(2){background-image: url(images/sy_pc2.png);}
+ul.list li:nth-child(3){background-image: url(images/sy_pc3.jpg);}
+ul.list li:nth-child(4){background-image: url(images/sy_pc4.jpg);}
+
+ul.list li p{padding: 30px; font-weight: bold;}
+
+.text{width: 980px; margin: 50px auto; display: flex; justify-content: space-between;word-break: keep-all; color: #3b3b3b;}
+.text li:nth-child(1){font-size: 42px; font-weight: bold; font-family: samyang;}
+.text li:nth-child(2){font-size: 19px; width: 370px; line-height: 35px; letter-spacing: -1px; font-family: noto;}
+
+@media screen and (max-width:1539px) {
+  ul.list{width: 100%;max-width: 1300px;}
+  ul.list li p{padding: 20px;}
+}
+@media screen and (max-width:1023px) {
+  ul.list{width: 90%; flex-wrap: wrap; justify-content: center;}
+  ul.list li{width: 50%; height: 250px; background-size: cover; font-size: 30px;}
+  .text{flex-wrap: wrap; width: 90%;}
+  .text li:nth-child(2){width: 100%; padding-top: 10px;}
+}
+@media screen and (max-width:766px) {
+  ul.list{width: 90%; flex-wrap: wrap; justify-content: center;}
+  ul.list li{width: 100%; height: 175px; background-size: cover; background-position: center;}
+ul.list li:nth-child(1){opacity: 0;;}
+ul.list li:nth-child(2){background-image: url(images/sy_mb2.png);}
+ul.list li:nth-child(3){background-image: url(images/sy_mb3.jpg);}
+ul.list li:nth-child(4){background-image: url(images/sy_mb4.jpg);}
+  }
+</style>
+</head>
+
+
+<ul class="text">
+  <li><p>삼양은 언제나<br>
+    당신의 곁에 있습니다.</p></li>
+  <li> 스페셜티 사업 및 글로벌 시장확대를 위해
+    화학, 식품, 의약바이오, 패키징 사업으로
+    미래성장동력을 만들어갑니다.</li>
+</ul>
+
+<ul class="list">
+  <li><p>화학</p></li>
+  <li><p>식품</p></li>
+  <li><p>의약바이오</p></li>
+  <li><p>패키징</p></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+
+    @font-face {
+    font-family: "Hankook KR TTF";
+    src: url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.eot");
+    src: url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/06719c1a6c0f0a390e2d5e37b1d23b7a.svg#Hankook KR TTF")format("svg");
+}
+
+    #flex{width: 1180px;height: 1120px;margin: 50px auto; display: flex; column-gap: 20px; flex-wrap: wrap; flex-direction: row;}
+    #flex div{display: flex; flex-direction: column; row-gap: 20px;}
+
+    #flex div p{overflow: hidden;}
+    #flex div img{transform: scale(1); transition: 0.5s;}
+    #flex div img:hover{transform: scale(1.2);}
+
+    #flex>div>div{position: relative; font-size: 0;}
+    #flex>div>div span{position: absolute; left: 30px; bottom: 50px;color: #fff; font-size: 24px; font-family: "Hankook KR TTF"; line-height: 34px;} 
+  </style>
+</head>
+<body>
+  
+<div id="flex">
+
+  <div>
+    <div class="hnc1">
+      <p><img src="images/hnc1.jpg" alt=""></p>
+      <span>팬데믹 이전으로 부활한 CES<br>2024</span>
+    </div>
+    <div class="hnc2">
+      <p><img src="images/hnc4.jpg" alt=""></p>
+      <span>지속 가능한 환경을 위한<br>
+        지속 불가능한 규제</span>
+    </div>
+  </div>
+
+  <div>
+    <div class="hnc3">
+      <p><img src="images/hnc2.jpg" alt=""></p>
+      <span>닛산, 항상 도전한다</span>
+    </div>
+   <div class="hnc4">
+     <p><img src="images/hnc5.jpg" alt=""></p>
+     <span>포뮬러 E 시즌 10 프리뷰</span>
+   </div>
+  </div>
+
+  <div>
+    <div class="hnc5">
+      <p><img src="images/hnc3.jpg" alt=""></p>
+      <span>포뮬러 E 백스테이지</span>
+    </div>
+    <div class="hnc6">
+      <p><img src="images/hnc6.jpg" alt=""></p>
+      <span>챗GPT 이후…<br>
+        2024년 우리가 주목할 기술</span>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

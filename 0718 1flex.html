@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ul{list-style: none;}
+a{text-decoration: none;}
+
+.menu ul{display: flex; font-size: 0; flex-direction: row; justify-content: center;}
+.menu ul li:nth-child(2)>div{display: flex; flex-direction: row;}
+.menu ul li>div{position: relative;}
+.menu p.box{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: transparent; color: #fff; transition: 0.5s; display: flex;justify-content: center; align-items: center; flex-direction: column;}
+.menu p.box span{display: block; font-size: 20px; margin-bottom: 10px;}
+.menu p.box a{display: block; font-size: 12px; padding: 10px 20px; background: #fff; color: #000;}
+.menu p.box:hover{background: rgba(0,0,0,0.6)}
+  </style>
+</head>
+<body>
+
+<div class="menu">
+
+<ul>
+
+  <li>
+      <p><img src="images/madforgarlic1.png" alt=""></p>
+
+      <div class="box">
+       <p>BREAD & STARTER</p>
+       <a href="#">자세히 보기</a>
+     </div>
+    </li>
+
+    <li>
+      <p><img src="images/madforgarlic2.jpg" alt="">
+        <div class="box">
+          <p>BREAD & STARTER</p>
+          <a href="#">자세히 보기</a>
+        </div>
+  </li>
+
+
+  <li>
+      <div class="inner">
+        <div>
+          <p><img src="images/madforgarlic3.png" alt=""></p>
+          <p><img src="images/madforgarlic4.png" alt=""></p>
+        </div>
+      </div>
+  </li>
+
+  <li>
+  <p><img src="images/madforgarlic5.jpg" alt=""></p>
+    <div class="box">
+     <p>BREAD & STARTER</p>
+     <a href="#">자세히 보기</a>
+    </div>
+  </li>
+
+    <div><p><img src="images/madforgarlic6.jpg" alt="">
+      <div class="box">
+        <p>BREAD & STARTER</p>
+        <a href="#">자세히 보기</a>
+      </div>
+      </p>
+    </div>
+  </li>
+
+
+
+  <li>
+    <div><p><img src="images/madforgarlic7.png" alt="">
+      <div class="box">
+        <p>BREAD & STARTER</p>
+        <a href="#">자세히 보기</a>
+      </div>
+    </p></div>
+    <div><p><img src="images/madforgarlic8.jpg" alt="">
+      <div class="box">
+        <p>BREAD & STARTER</p>
+        <a href="#">자세히 보기</a>
+      </div>
+    </p></div>
+  </li>
+
+
+</ul>
+  </div>
+
+
+</body>
+</html>

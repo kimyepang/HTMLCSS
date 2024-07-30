@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>input</title>
+
+  <style>
+    
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color:#333}
+
+input[type="radio"]{display: none;}
+
+#photo1:checked ~ .photo p:first-child img{display: block;}
+#photo2:checked ~ .photo p:nth-child(2) img{display: block;}
+#photo3:checked ~ .photo p:nth-child(3) img{display: block;}
+#photo4:checked ~ .photo p:nth-child(4) img{display: block;}
+#photo5:checked ~ .photo p:nth-child(5) img{display: block;}
+#photo6:checked ~ .photo p:nth-child(6) img{display: block;}
+
+.photo{width: 500px;height: 300px; position: relative;}
+.photo p{width: 100%;height: 100%; position: absolute; left: 0; top: 0;}
+.photo p img{width: 100%; height: 100%; object-fit: cover; display: none; }
+
+label{display: block; float: left; width: calc(500px / 6); text-align: center; background-color: #9cc;}
+label:hover{color: #669; cursor: pointer;}
+#photo1:checked ~ label:first-of-type{background-color: #699;}
+#photo2:checked ~ label:nth-of-type(2){background-color: #699;}
+#photo3:checked ~ label:nth-of-type(3){background-color: #699;}
+#photo4:checked ~ label:nth-of-type(4){background-color: #699;}
+#photo5:checked ~ label:nth-of-type(5){background-color: #699;}
+#photo6:checked ~ label:nth-of-type(6){background-color: #699;}
+
+  </style>
+</head>
+
+<body>
+  
+<input type="radio" name="photo" id="photo1" checked>
+<input type="radio" name="photo" id="photo2">
+<input type="radio" name="photo" id="photo3">
+<input type="radio" name="photo" id="photo4">
+<input type="radio" name="photo" id="photo5">
+<input type="radio" name="photo" id="photo6">
+
+<div class="photo">
+  <p><img src="images/photo1.jpg" alt="photo1"></p>
+  <p><img src="images/photo2.jpg" alt="photo2"></p>
+  <p><img src="images/photo3.jpg" alt="photo3"></p>
+  <p><img src="images/photo4.jpg" alt="photo4"></p>
+  <p><img src="images/photo5.jpg" alt="photo5"></p>
+  <p><img src="images/photo6.jpg" alt="photo6"></p>
+</div>
+
+  <label for="photo1">photo1</label>
+  <label for="photo2">photo2</label>
+  <label for="photo3">photo3</label>
+  <label for="photo4">photo4</label>
+  <label for="photo5">photo5</label>
+  <label for="photo6">photo6</label>
+
+</body>
+</html>

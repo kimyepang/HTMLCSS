@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+div:first-child{width: 100px;height: 100px;background: #ccc; animation-name: ani;
+animation-duration: 5s; animation-timing-function:ease; animation-iteration-count: infinite; animation-direction:alternate; }
+
+div:nth-child(2){width: 100px;height: 100px;background: #ccc; animation-name: ani;
+animation-duration: 5s; animation-timing-function:ease-in; animation-iteration-count: infinite; animation-direction:alternate; }
+
+div:nth-child(3){width: 100px;height: 100px;background: #ccc; animation-name: ani;
+animation-duration: 5s; animation-timing-function:ease-out; animation-iteration-count: infinite; animation-direction:alternate; }
+
+div:nth-child(4){width: 100px;height: 100px;background: #ccc; animation-name: ani;
+animation-duration: 5s; animation-timing-function:ease-in-out; animation-iteration-count: infinite; animation-direction:alternate; }
+
+div:nth-child(5){width: 100px;height: 100px;background: #ccc; animation-name: ani;
+animation-duration: 5s; animation-timing-function:linear; animation-iteration-count: infinite; animation-direction:alternate; }
+
+div:nth-child(6){width: 100px;height: 100px;background: #ccc; animation-name: ani;
+animation-duration: 5s; animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1); animation-iteration-count: infinite; animation-direction:alternate; }
+
+@keyframes ani {
+  from{transform: translateX(0);}
+  to{transform: translateX(500px);}
+  
+}
+
+  </style>
+</head>
+<body>
+  
+<div>ease</div>
+<div>ease-in</div>
+<div>ease-out</div>
+<div>ease-in-out</div>
+<div>linear</div>
+<div>cubic-bezier</div>
+
+
+</body>
+</html>

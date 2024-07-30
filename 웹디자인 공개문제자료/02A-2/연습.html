@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+
+.wrap{width: 1200px; margin: 0 auto; }
+
+.top{width: 100%; height: 100px;text-align: center;}
+.top .logo{width: 200px; height: 100px; float: left; line-height: 120px;}
+.top .logo img{}
+
+.top .menu{float: right;}
+.top .menu>ul{width: 600px;height: 50px;margin-top: 50px;}
+.top .menu>ul>li{width: 25%;float: left;line-height: 50px; position: relative;}
+.top .menu>ul>li>a{border: 1px solid; border-left: none; box-sizing: border-box; display: block;}
+.top .menu>ul>li>a:first-child{border-left: 1px solid;}
+
+.top .menu>ul>li:hover ~ .bg{height: 150px;}
+.top .menu>ul:hover .sub{height: 150px;}
+.top .menu .sub li:hover a{background: #fff; color: #333;}
+
+.top .sub{position: absolute; width: 100%; height: 0px; left: 0; top: 50px; z-index: 2; overflow: hidden; transition: 0.5s;}
+.top .sub a{display: block; color: #fff; background: #333; line-height: 50px;}
+
+.bg{width: 100%; height:0px;background: #333; position: absolute; left: 0; top: 100px; z-index: 1; transition: 0.5s;}
+
+.slide{margin: 0 auto; width: 100%; height: 300px;}
+
+.con{width: 100%; height: 200px;}
+.con>div{float: left; width: calc(100% / 3);}
+.con .left{height: 200px; background: #fff;}
+.con .center{height: 200px;background: #333;}
+.con .right{height: 200px;background: #555;}
+
+.con .left a{border-radius: 1px solid #333; display: block; position: relative;line-height: 50px;}
+.con .left tr td:first-child{width: 70%; white-space: nowrap; text-overflow: ellipsis;}
+.con .left tr td:nth-child(2){width: 30%;}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  
+
+    <div class="top">
+      <div class="logo"><img src="images/logo.png" alt="logo"></div>
+      <div class="menu">
+        <ul>
+  
+          <li>
+            <a href="#">재단소개</a>
+            <ul class="sub">
+              <li><a href="#">설립취지</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">찾아오시는길</a></li>
+            </ul>
+          </li>
+  
+          <li>
+            <a href="#">후원하기</a>
+            <ul class="sub">
+              <li><a href="#">국내후원</a></li>
+              <li><a href="#">국외후원</a></li>
+              <li><a href="#">맞춤후원</a></li>
+            </ul>
+          </li>
+  
+          <li>
+            <a href="#">자료실</a>
+            <ul class="sub">
+              <li><a href="#">서식자료실</a></li>
+              <li><a href="#">사진자료실</a></li>
+              <li><a href="#">후원양식</a></li>
+            </ul>
+          </li>
+  
+          <li>
+            <a href="#">스토리</a>
+            <ul class="sub">
+              <li><a href="#">웹진</a></li>
+              <li><a href="#">보고서</a></li>
+              <li><a href="#">나의 후원</a></li>
+            </ul>
+          </li>
+          <div class="bg"></div>
+        </ul>
+      </div>
+
+    </div>
+
+  
+  <div class="slide"><img src="images/slide01.jpg" alt="slide"></div>
+  
+  <div class="con">
+
+    <div class="left">
+        
+          <a href="#">공지사항</a>
+
+          <table>
+            <tr>
+              <td>서울특별시약사회와 함께하는 의료비지원사업</td>
+              <td>2019.10.04</td>
+            </tr>
+            
+            <tr>
+              <td>개그맨 김재우 부부와 함께하는 '카레한상'</td>
+              <td>2019.09.25</td>
+            </tr>
+            <tr>
+              <td>MBC 장애인식개선 <우리동네 피터팬> 방송 안내</td>
+              <td>2018.09.10</td>
+            </tr>
+            <tr>
+              <td>2019 국내선물보내기 캠페인 결과보고</td>
+              <td>2019.10.21</td>
+            </tr>
+            <tr>
+              <td>2019년 서울형 뉴딜일자리 참여자 모집</td>
+              <td>2019.10.10</td>
+            </tr>
+            <tr>
+              <td>2019년 제5회 에너지나눔 대축제</td>
+              <td>2019.09.28</td>
+            </tr>
+
+          </table>
+       
+
+    </div>
+
+    <div class="center">
+
+    </div>
+
+    <div class="right">
+
+    </div>
+
+  </div>
+
+
+</div>
+</body>
+</html>

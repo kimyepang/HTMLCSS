@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    a{text-decoration: none; color: #000;}
+
+@font-face {
+  font-family: pretendard;
+  src: url(webfonts/Pretendard-Regular.otf);
+}
+
+    .text{margin: 50px auto;width: 1200px; text-align: left; display: flex;justify-content: space-between;}
+    .text .left p{font-size: 26px; font-family: pretendard;}
+    .text .left h1{font-size: 42px; font-family: pretendard;}
+    .text .right 
+    .text .right a{display: inline-block; padding: 10px 20px; border: 1px solid; font-size: 20px; font-family: pretendard; border-radius: 40px; align-items: flex-end;}
+
+    .grid{display: grid;width: 1200px;height: 475px; margin: 0 auto ;
+    grid-template-columns: repeat(4, 288px);
+    grid-template-rows: repeat(2, 230px);
+    gap: 15px;
+    }
+    .grid div img{height: 100%;width: 100%; object-fit: cover;}
+    .grid>div:first-child{grid-column: 1 / span 2; grid-row: 1 / span 2;}
+    .grid>div:nth-child(2)
+    .grid>div:nth-child(3){grid-row: 2;}
+    .grid>div:nth-child(4)
+    .grid>div:nth-child(5){grid-row: 3;}
+
+    .grid div{position: relative; overflow: hidden; border-radius: 20px;}
+    .grid div::before{content: ""; background: url(images/yuhan_icon.svg); width: 0;height: 0px;position: absolute; right: 18px; bottom:18px; transition: 0.5s; z-index: 1;}
+    .grid div::after{content: ""; position: absolute; right: -25px; bottom:-25px; width:0px; height: 0px; background: rgba(0,0,0,0.5); border-radius: 50%; transition: 0.5s;}
+    .grid div:hover::after{width: 100px; height: 100px;}
+    .grid div:hover::before{width: 30px; height: 30px;}
+
+  </style>
+</head>
+<body>
+
+<div class="text">
+  <div class="left">
+    <p>유한건강생활</p>
+    <h1>YOUTUBE</h1>
+  </div>
+  <div class="right">
+    <a href="#">유투브 바로가기 </a>
+  </div>
+</div>
+<div class="grid">
+  <div><a href="#"><img src="images/yuhan1.jpg" alt=""></a></div>
+  <div><a href="#"><img src="images/yuhan2.jpg" alt=""></a></div>
+  <div><a href="#"><img src="images/yuhan4.jpg" alt=""></a></div>
+  <div><a href="#"><img src="images/yuhan3.jpg" alt=""></a></div>
+  <div><a href="#"><img src="images/yuhan5.jpg" alt=""></a></div>
+</div>
+
+
+</body>
+</html>
