@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+
+*{margin: 0;padding: 0;}
+.bg{height: 500px;background: url(images/photo1.jpg) center/cover;}
+.text{font-size: 100px; font-weight: bold;text-align: center; line-height: 500px;mix-blend-mode: screen;background-color: #fff;}
+
+.text1{background: url(images/photo1.jpg) center/cover;
+  font-size: 100px; font-weight: bold;text-align: center;
+  color:transparent; background-clip:text;}
+
+section{position: relative;}
+p{position: absolute;}
+p:nth-child(2){left: 100px;}
+p:nth-child(3){left: 200px;}
+p img{mix-blend-mode:multiply;}
+
+</style>
+
+
+<body>
+  
+  <div class="bg">
+    <div class="text">mix-blend-mode</div>
+  </div>
+
+  <div class="text1">mix-blend-mode</div>
+
+  <section>
+    <p><img src="images/well1.svg" alt=""></p>
+    <p><img src="images/well2.svg" alt=""></p>
+    <p><img src="images/well3.svg" alt=""></p>
+  </section>
+
+</body>
+</html>

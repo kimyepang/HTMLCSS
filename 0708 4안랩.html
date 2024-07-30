@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+*{margin: 0;padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #fff; font-family: pretendard;}
+p{font-family: pretendard;}
+
+@font-face {
+  font-family: pretendard;
+  src: url(webfonts/Pretendard-Medium.otf) format("opentype");
+}
+
+body{background-color: #111111;}
+
+#wrap{width: 1200px; overflow: hidden; margin: 50px auto;}
+
+#wrap .head{width: 100%; height: 151px;}
+#wrap .head .logo{width: 100%;}
+#wrap .head .logo>img{width:300px;height: 19px;}
+#wrap .head .text{width:100%; height: 92px; margin-top: 40px;}
+#wrap .head .text>p{color: #fff; font-size: 32px;}
+
+#wrap .menu{width: 1200px;height: 720px; position: relative;}
+#wrap .menu>ul{margin-top: 80px;}
+#wrap .menu>ul>li{width: 472px;height: 75px; border-bottom: 1px solid #363636; }
+#wrap .menu>ul>li>p{line-height: 75px; font-size: 20px; color: #989898;transition: 0.5s;}
+#wrap .menu>ul>li>p img{margin-left: 10px;}
+
+#wrap .menu .sub{width: 568px;height: 300px; position: absolute; left: 568px; top: -50px;}
+#wrap .menu .sub img{opacity: 0; transition: 0.5s;}
+#wrap .menu .sub p{opacity: 0; transition: 1s;}
+#wrap .menu>ul>li:hover .sub img, p{opacity: 1;}
+#wrap .menu>ul>li:hover .sub p{opacity: 1;}
+
+#wrap .menu .sub li:nth-child(2){margin-top: 80px;}
+#wrap .menu .sub p{color: #fff; font-size: 18px; line-height: 30px; }
+
+#wrap .menu>ul>li:first-child:hover >p{font-size: 24px; color: #1970ff;}
+#wrap .menu>ul>li:nth-child(2):hover >p{font-size: 24px;color: #2ccbe5; }
+#wrap .menu>ul>:nth-child(3):hover >p{font-size: 24px; color: #2ca8fc;}
+#wrap .menu>ul>li:nth-child(4):hover >p{font-size: 24px;color: #8ab1ff; }
+#wrap .menu>ul>li:nth-child(5):hover >p{font-size: 24px; color: #55d8c5;}
+
+#wrap .right .viewmore{width: 598px;height: 50px; margin-top: 300px; position: absolute; left: 0 ; top: 0;}
+#wrap .right .viewmore a{width: 171px;height: 20px; font-size: 16px;}
+  </style>
+
+</head>
+<body>
+
+  <div id="wrap">
+
+    <div class="head">
+      <div class="logo"><img src="images/안랩/images/ahn-plus.png" alt="ahnplus"></div>
+      <div class="text"><p>디지털 비즈니스 혁신을 위한<br>
+        최적의 보안 플랫폼</p></div>
+    </div>
+
+        
+        <div class="menu">
+
+          <ul>
+
+            <li>
+<p>AhnLab CONNECT PLUS<span><img src="images/안랩/images/after_connect.png" alt="connect"></span></p>
+              <ul class="sub">
+                <li><img src="images/안랩/images/ahn_connect.png" alt="ahn_connect"></li>
+                <li><p>AhnLab CONNECT PLUS는 XDR, SOAR, TI 플랫폼 등으로 구성되어
+                  연계와 연동을 기반으로 통합 보안의 정점에 선 차세대 보안 플랫폼입니다.</p></li>
+              </ul>
+            </li>
+
+            <li>
+          <p>AhnLab CLOUD PLUS<span><img src="images/안랩/images/after_cloud.png" alt="CLOUD"></span></p>
+              <ul class="sub">
+                <li><img src="images/안랩/images/ahn_cloud.png"></li>
+                <li><p>AhnLab CLOUD PLUS는 클라우드 워크로드 보안 플랫폼(CWPP)부터
+                  클라우드 최적화 방화벽, IPS 등 최상의 기술력을 갖춘 솔루션을 통해
+                  고객의 디지털 혁신 기반을 마련합니다.</p></li>
+              </ul>
+            </li>
+
+            <li>
+        <p>AhnLab ENDPOINT PLUS<span><img src="images/안랩/images/after_endpoint.png" alt="ENDPOINT"></span></p>
+              <ul class="sub">
+                <li><img src="images/안랩/images/ahn_endpoint.png" alt="ahn_connect"></li>
+                <li><p>AhnLab ENDPOINT PLUS는 PC, 서버, 모바일, OT 기기 등 여러 엔드포인트
+                  자산에 대한 위협을 체계적으로 방어하는 엔드포인트 보안 플랫폼입니다.</p></li>
+              </ul>
+            </li>
+
+            <li>
+      <p>AhnLab NETWORK PLUS<span><img src="images/안랩/images/after_network.png" alt="NETWORK"></span></p>
+              <ul class="sub">
+                <li><img src="images/안랩/images/ahn_network.png" alt="ahn_connect"></li>
+                <li><p>AhnLab NETWORK PLUS는 방화벽, IPS, 디도스 대응, 샌드박스 등
+                  여러 솔루션들이 유기적으로 연동하여 최상의 보안 역량을 제공하는
+                  네트워크 보안 플랫폼입니다.</p></li>
+              </ul>
+            </li>
+
+            <li>
+          <p>AhnLab SERVICE PLUS<span><img src="images/안랩/images/after_service.png" alt="SERVICE"></span></p>
+              <ul class="sub">
+                <li><img src="images/안랩/images/ahn_service.png" alt="ahn_connect"></li>
+                <li><p>안랩의 보안 전문가들이 수십 년간 축적해온 경험과 노하우를 바탕으로
+                  최상의 보안 서비스를 제공해 안전한 비즈니스 환경을 조성합니다.</p></li>
+              </ul>
+            </li>
+
+          </ul>
+        </div>
+  
+      <div class="viewmore">
+        <a href="https://www.ahnlab.com/ko/product/service-plus">VIEW MORE<span><img src="images/안랩/images/more.svg" alt="more"></span></a>
+      </div>
+
+  </div>
+
+
+  
+</body>
+</html>
