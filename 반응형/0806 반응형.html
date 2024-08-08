@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <style>
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+
+h1{font-family: Montserrat; font-weight: 400;color: #3f51b5}
+p{font-family: "PT serif"; color: #616161;}
+
+.slide{width: 100%;}
+.slide img{width: 100%; object-fit: cover;}
+
+#header{width: 100%;margin: 0 auto; display: flex; justify-content: space-between;padding: 28px 52px;}
+#header h1{width: 10%; font-size: 26px;}
+#header ul{width: 40%;display: flex; justify-content: space-between; align-items: center;}
+#header ul a{font-family: Montserrat; color: #3f51b5;}
+
+#intro{width: 90%;max-width: 1132px;margin: 0 auto ; padding-top: 100px;}
+
+#intro .weare{width: 100%; height: 100%; display: flex; flex-direction: row;}
+#intro .weare h1{width: calc(100% - 600px); font-size: 42px;position: relative;}
+#intro .weare p{width: 600px;}
+#intro .weare h1::after{position: absolute; content: ""; width: 2px; height: 44px; background-color: #e0e0e0; top: 0; right: 20px;}
+
+#intro .list{width: 100%;display: flex; justify-content: space-between; padding: 110px 0px; position: relative;}
+#intro .list li{width: 23%;text-align: center;}
+#intro .list li img{height: 52px;}
+#intro .list li h1{font-size: 16px;padding: 20px 0;}
+#intro .list li p{font-size: 14px;}
+#intro .list:after{position: absolute; content: ""; left: 0; bottom: 0; width: 100%; height: 2px; background-color: #e0e0e0;}
+
+#work{width: 100%;padding: 50px 0 110px; font-size: 0; position: relative;}
+#work::after{position: absolute; content: ""; width: 20px; height: 2px; background-color: #3f51b5; left: 50%; transform: translateX(-50%); bottom: 0;}
+#work h1{width: 90%; font-size: 42px; max-width: 1132px;margin: 0 auto; padding: 40px 0;}
+#work ul{display: flex; flex-wrap: wrap; }
+#work ul li{flex: 1 0 25%;}
+#work ul li img{width: 100%;height: 100%;object-fit: cover;}
+
+#blog{width: 90%; max-width: 1132px; padding-top: 110px; margin: 0 auto;}
+#blog h1{font-size: 42px; width: 100%;}
+
+@media screen and (max-width:1132px) {
+  #intro .weare{flex-direction: column; text-align: center;}
+  #intro .weare h1{width: 100%;}
+  #intro .weare p{width: 100%; line-height: 30px; padding: 20px;}
+  #intro .weare h1::after{display: none;}
+  #work ul li{flex: 1 0 50%;}
+}
+
+@media screen and (max-width:768px) {
+  #intro .list{flex-direction: column;}
+  #intro .list li{display: flex; flex-direction: column; width: 100%;}
+  #intro .list li p:last-child{padding-bottom: 20px;}
+  #work h1{text-align: center;}
+  #work ul li{flex: 1 0 100%}
+}
+  </style>
+</head>
+<body>
+ 
+  <section id="header">
+    <h1>INDIGO</h1>
+    <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">WE ARE</a></li>
+      <li><a href="#">WORK</a></li>
+      <li><a href="#">BLOG</a></li>
+      <li><a href="#">CONTACT US</a></li>
+    </ul>
+  </section>
+  
+<div class="slide"><img src="images/0806_slide01.jpg" alt=""></div>
+
+<section id="intro">
+
+  <div class="weare">
+    <h1>WE ARE</h1>
+    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a<br>
+      piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+  </div>
+
+    <ul class="list">
+      <li>
+        <p><img src="images/0806_1.png" alt="icon1"></p>
+        <h1>HOME</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </li>
+      <li>
+        <p><img src="images/0806_2.png" alt="icon2"></p>
+        <h1>WE ARE</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </li>
+      <li>
+        <p><img src="images/0806_3.png" alt="icon3"></p>
+        <h1>WORK</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </li>
+      <li>
+        <p><img src="images/0806_4.png" alt="icon4"></p>
+        <h1>BLOG</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </li>
+    </ul>
+    
+</section>
+
+<section id="work">
+  <H1>WORK</H1>
+  <ul>
+    <li><p><img src="images/0806_work01.jpg" alt=""></p></li>
+    <li><p><img src="images/0806_work02.jpg" alt=""></p></li>
+    <li><p><img src="images/0806_work03.jpg" alt=""></p></li>
+    <li><p><img src="images/0806_work04.jpg" alt=""></p></li>
+    <li><p><img src="images/0806_work05.jpg" alt=""></p></li>
+    <li><p><img src="images/0806_work06.jpg" alt=""></p></li>
+    <li><p><img src="images/0806_work07.jpg" alt=""></p></li>
+    <li><p><img src="images/0806_work08.jpg" alt=""></p></li>
+  </ul>
+</section>
+
+<section id="blog">
+  <h1>BLOG</h1>
+</section>
+
+</body>
+</html>

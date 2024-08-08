@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  *{margin: 0; padding: 0;}
+  ul{list-style: none;}
+
+@font-face {
+  font-family: pretendard;
+  src: url(webfonts/Pretendard-Regular.otf) format("opentype");
+}
+
+body{ background: #f0f0f0;}
+
+  #wrap{max-width: 940px; width: 99%; margin: 0 auto;}
+  h1{font-size: 50px; font-family: pretendard; text-align: center;position: relative;}
+  h1::before{position: absolute; content: "";width: 270px; height: 3px; left: 50%;transform: translateX(-50%);bottom: -5px; background: #000;}
+  h1::after{position: absolute; content: "";background: url(images/icon_vs_ttl.png);width: 43px; height: 38px; left: calc(50% + 126px);bottom: -13px;}
+
+  .list{width: 100%;display: flex; flex-wrap: wrap;gap: 40px; margin-top: 150px;}
+  .list li{width: calc(50% - 20px); height: 480px; background-size: cover; border-top-left-radius: 70px; border-bottom-right-radius: 70px; }
+  .list li:first-child{background-image: url(images/bg_vs_value_1.jpg); margin-top: -55px;}
+  .list li:nth-child(2){background-image: url(images/bg_vs_value_2.jpg);position: relative;}
+  .list li:nth-child(2)::before{position: absolute; content: ""; background: url(images/bg_vs_value_2_bg.png);width: 450px; height: 480px; left: 100px; top: -70px;z-index: -1;}
+  .list li:nth-child(3){background-image: url(images/bg_vs_value_3.jpg);margin-top: -55px;position: relative;}
+  .list li:nth-child(3)::before{position: absolute; content: ""; background: url(images/bg_vs_value_2_bg.png);width: 450px; height: 480px; left: -100px; top: 70px;z-index: -1;}
+  .list li:nth-child(4){background-image: url(images/bg_vs_value_4.jpg);}
+
+.list li{display: flex; justify-content: center; align-items: center; text-align: center;}
+.list li .text{color: #fff; font-family: pretendard; padding: 50px; background-color: rgba(0,0,0,0.3); width: 100%; word-break: keep-all;}
+.list li .text p:first-child{font-size: 32px; font-weight: bold;}
+.list li .text p:nth-child(2){font-size: 20px; margin-top: 20px;}
+
+@media screen and (max-width:960px) {
+  .list{gap:20px}
+  .list li{width: calc(50% - 10px); height: 480px;}
+  .list li .text p:first-child{font-size: 16px;}
+  .list li .text p:nth-child(2){font-size: 14px;}
+}
+
+@media screen and (max-width:430px){
+  #wrap{max-width: 410px;}
+  .list{flex-direction: column;}
+  .list li{width: 75%;height: 300px;}
+  .list li:nth-child(2){margin-left: 25%;}
+
+  .list li:nth-child(4){margin-left: 25%;}
+
+}
+
+  </style>
+</head>
+<body>
+  
+<div id="wrap">
+
+  <h1>Core Value</h1>
+  
+  <ul class="list">
+    <li>
+        <div class="text">
+          <p>Taste & Quality</p>
+          <p>최선의 '품질'을통해<br>
+            최상의 '맛'을 구현합니다</p>
+        </div>
+    </li>
+    <li>
+      <div class="text">
+        <p>Convenience</p>
+        <p>보관/조리/폐기 전반에 걸친 고객 중심 마인드로<br>
+          최적화된 편의를 제공합니다.</p>
+      </div>
+    </li>
+    <li>
+      <div class="text">
+        <p>Health & Wellness</p>
+        <p>고객의 건강과 라이프스타일을 지원하는<br>
+          맞춤형 푸드 옵션을 제공합니다.</p>
+      </div>
+    </li>
+
+      <li>
+        <div class="text">
+          <p>Value</p>
+          <p>지구와 사회에 긍정적인 영향을 주는<br>
+            지속 가능하고 책임감 있는 사업을 이어갑니다.</p>
+        </div>
+    </li>
+  </ul>
+
+</div>
+
+</body>
+</html>

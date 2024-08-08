@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+
+@font-face {
+  font-family: notoR;
+  src: url(webfonts/NotoSans-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: notoB;
+  src: url(webfonts/NotoSans-Bold.woff) format("woff");
+}
+
+    .voiceWrap{background-color:#f2efe8;}
+    .voiceWrap .voice{width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 40px; height: 100vh; display: flex; align-items: center; flex-wrap: wrap; justify-content: space-between; box-sizing: border-box;}
+    .voiceWrap .voice div{width: 460px;}
+    .voiceWrap .voice div .t1{font-size: 20px; color:#111; font-family: notoR;}
+    .voiceWrap .voice div .t2{font-size: 36px; color:#111; font-family: notoB; margin: 20px 0;}
+    .voiceWrap .voice div .t3{font-size: 18px; color: #666; font-family: notoR; letter-spacing: -1px;}
+    .voiceWrap .voice div a{display: inline-block; border: 1px solid rgba(17,17,17,0.6); padding: 0 24px; text-decoration: none; color: #666; font-family: notoR;display: flex; height: 55px; width: 80px;;align-items: center; margin-top: 40px;}
+
+    .voiceWrap .voice>p{width: calc(100% - 460px); text-align: center;}
+    .voiceWrap .voice>p img{width: 80%; margin: 0 auto;}
+
+    @media screen and (max-width:1024px) {
+      .voiceWrap .voice div{width: 100%; text-align: center;}
+      .voiceWrap .voice div a{margin: 20px auto;}
+      .voiceWrap .voice div .t3{font-size: 20px;}
+      .voiceWrap .voice>p{width: 100%;}
+      .voiceWrap .voice>p img{max-width: 580px;}
+    }
+
+    @media screen and (max-width:767px) {
+      .voiceWrap .voice div{margin-top: 100px;}
+      .voiceWrap .voice div .t1{font-size: 16px;}
+    .voiceWrap .voice div .t2{font-size: 24px;}
+    .voiceWrap .voice div .t3{font-size: 14px;}
+      .voiceWrap .voice>p img{width: 80%;}
+      .voiceWrap .voice{padding: 0 20px;}
+      .voiceWrap .voice>p img{width: 100%; margin-bottom: 100px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="voiceWrap">
+    <div class="voice">
+      <div>
+        <p class="t1">엘르보이스</p>
+        <p class="t2">여성의 삶,<Br>
+          레퍼런스가 필요할 때</p>
+        <p class="t3">작가, 북튜버, 아나운서, 기자 싱어송라이터까지!<Br>동시대를 살아가는 여성들의 에세이 뉴스레터를 구독해보세요.</p>
+        <a href="#"><span>바로가기</span><img src="images/main-page_button-arrow-dark.svg" alt="ellevoice"></a>
+      </div>
+    <p><img src="images/theme-service_ellevoice.png" alt=""></p>
+    </div>
+  </div>
+</body>
+</html>

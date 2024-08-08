@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+        *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none; color: #fff;}
+
+    @font-face {
+      font-family: NanumBarunGothic;
+      src: url(webfonts/NanumBarunGothicLight.ttf); format: "truetype"}
+
+#wrap{font-family: NanumBarunGothic;}
+#wrap>p{font-size: 25px; color: #444444; padding: 30px 0; text-align: center; font-weight: bold;}
+
+#wrap ul.list{width: 95%;;max-width: 940px; margin: 0 auto; display: flex; gap:20px;}
+#wrap ul.list li{flex: 0 1 20%; height: 305px;padding: 10px 10px 30px 10px;background-color: #D2492C; border-radius: 20px; text-align: center; display: flex; flex-direction: column;justify-items: center; box-sizing: border-box;}
+#wrap ul.list li>p:first-child{width:108px; height:100px; overflow: hidden;padding: 10px 0;transform: translateX(20px);}
+#wrap ul.list li:first-child img{object-position: 0; }
+#wrap ul.list li:nth-child(2) img{object-position: -108px;}
+#wrap ul.list li:nth-child(3) img{object-position: -216px;}
+#wrap ul.list li:nth-child(4) img{object-position: -324px;}
+#wrap ul.list li:nth-child(5) img{object-position: -432px;}
+#wrap ul.list li>p:nth-child(2){font-size: 23px; color: #ECFF96; margin: 5px 0; font-weight: bold;}
+#wrap ul.list li>p:nth-child(2) span{font-size: 18px; color:#D2492C; position: relative; z-index: 1;}
+#wrap ul.list li>p:nth-child(2) span::before{position: absolute; content: ""; left: -10px; top: -3px; width: 20px; height: 20px; border-radius: 50%; background-color: #ECFF96;}
+#wrap ul.list li .inner{font-size: 17px; color: #fff; line-height: 25px;}
+#wrap ul.list li .inner p{position: relative; }
+.esg ul li .inner p:before{content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 2px; height: 2px; background: #fff; border-radius: 50%;}
+
+@media screen and (max-width:960px) {
+  #wrap ul.list li{height: 240px; }
+  #wrap ul.list li>p:first-child{width:54px; height:50px;}
+  #wrap ul.list li>p:nth-child(2){font-size: 14px;}
+  #wrap ul.list li>p:nth-child(2) span{font-size: 14px;}
+    #wrap ul.list li .inner{font-size: 14px;}
+}
+
+@media screen and (max-width:640px) {
+  #wrap ul.list{flex-direction: column;}
+  #wrap ul.list li{flex: 0 0 100%; flex-direction: row; align-items: center;}
+  #wrap ul.list li .inner{display: flex; flex-direction: row;}
+  br{display: none;}
+  #wrap ul.list li>p:nth-child(2) span::before{display: none;}
+
+}
+  </style>
+</head>
+<body>
+
+<div id="wrap">
+  <p>고객불만 처리절차</p>
+  
+  <ul class="list">
+    <li>
+      <p><img src="https://www.shinsegaefood.com/images/icon/icon_voc.png" alt="list1"></p>
+      <p><span>1</span>     접수↗</p>
+      <div class="inner">
+        <p>홈페이지</p>
+        <p>유선</p>
+        <p>우편</p>
+      </div>
+    </li>
+    <li>
+      <p><img src="https://www.shinsegaefood.com/images/icon/icon_voc.png" alt="list1"></p>
+      <p><span>2</span>     현장방문</p>
+      <div class="inner">
+        <p>매장 관리자</p>
+        <p>CS 담당자</p>
+      </div>
+    </li>
+    <li>
+      <p><img src="https://www.shinsegaefood.com/images/icon/icon_voc.png" alt="list1"></p>
+      <p><span>3</span>     원인분석</p>
+      <div class="inner">
+        <p>매장 및 제조사</p>
+        <p>품질혁신팀</p>
+        <p>연구분석팀</p>
+        <p>식품안전센터</p>
+      </div>
+    </li>
+    <li>
+      <p><img src="https://www.shinsegaefood.com/images/icon/icon_voc.png" alt="list1"></p>
+      <p><span>4</span>     대책수립</p>
+      <div class="inner">
+        <p>원인분석<BR>및 대책수립</p>
+        <p>재발방지 교육<Br>및 개선</p>
+      </div>
+    </li>
+    <li>
+      <p><img src="https://www.shinsegaefood.com/images/icon/icon_voc.png" alt="list1"></p>
+      <p><span>5</span>     고객보고</p>
+      <div class="inner">
+        <p>소비자분쟁해결기준<BR>에 의한 보상↗</p>
+      </div>
+    </li>
+  </ul>
+</DIV>
+
+</body>
+</html>

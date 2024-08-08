@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+    a{text-decoration: none;color: #333;}
+    p{font-family: nanum;}
+    @font-face {
+  font-family: nanum;
+  src: url(webfonts/NanumBarunGothicLight.ttf) format("truetype");
+}
+
+
+#wrap>p{font-size: 34px; color: #444444; text-align: center;}
+
+#wrap .info{width: 940px;height: 424px; display: flex; justify-content: space-between; margin: 0 auto;}
+#wrap .info li{width: 311px;height: 100%; background-position: center;}
+#wrap .info li:first-child{background-image:url(images/bg_info_1.jpg);}
+#wrap .info li:nth-child(2){background-image:url(images/bg_info_2.jpg);}
+#wrap .info li:nth-child(3){background-image:url(images/bg_info_3.jpg);}
+#wrap .info li a{display: block;width: 100%;height: 100%;position: relative;color: #fff; }
+#wrap .info li a::after{position: absolute;content: "";width: 100%;height: 100%;left: 0;top: 0;background-color: rgba(0,0,0,0.5);}
+#wrap .info li a p{position: relative;z-index: 1; text-align: center;}
+#wrap .info li a p:first-child{margin-bottom: 20px;}
+  </style>
+</head>
+<body>
+  
+<div id="wrap">
+  <p>명확한 비전과 전략으로 최고의 투자 가치를 실현하는 신세계푸드</p>
+  
+  <ul class="info">
+    <li>
+        <a href="#">
+            <p>경영정보</p>
+            <p>주주 및 이사회 구성을<br>안내해 드립니다.</p>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <p>재무정보</p>
+            <p>영업현황 및 재무제표를<br>안내해 드립니다.</p>
+        </a>
+    </li>
+    <li>
+        <a href="#">
+            <p>주식정보</p>
+            <p>주가정보를<br>안내해 드립니다.</p>
+        </a>
+    </li>
+  </ul>
+  
+  <div class="notice">
+    <a href="#">
+      <div class="txt">
+        <p>공시 및 공고</p>
+        <p>결산 공고 및 주주총회 결과를<br>안내해 드립니다.</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
