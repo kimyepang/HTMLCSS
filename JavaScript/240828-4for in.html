@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+
+
+</style></head>
+<body>
+  
+  <script>
+const person = {fname:"John", lname:"Doe", age:25};
+for(let x in person){
+  console.log(x); // x = 0 , 1 , 2 / person[x] = fname, lname, age
+  document.write(person[x])
+}
+
+document.write("<Br>")
+
+const numbers = [45, 4, 9, 16, 25];
+for(let x in numbers){
+  console.log(x);
+  document.write(numbers[x]) 
+}
+
+document.write("<Br>")
+
+for(let i = 0; i<=4; i++){
+document.write(numbers[i])
+} //for in 을 쓰면 변수 i나 x에 0~4 라는 숫자를 설정할 필요가 없네! 
+
+  </script>
+</body>
+</html>

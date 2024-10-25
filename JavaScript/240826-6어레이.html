@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+  
+
+  <script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.write(typeof fruits + "<br>");
+
+document.write(fruits.join(" * ") + "<br>");
+document.write(typeof fruits.join(" * ") + "<br>");
+
+fruits.pop();
+document.write(fruits + "<br>");
+// ♣ 변수 문자 결합 : +연산자
+// ♣ 좌우의 식 연결 : ,연산자
+// ♣ `${변수}<br>` : 변수와 문자 사이에 ""+,없이 쓸수있다
+document.write(`${fruits}<br>`);
+document.write(`${fruits[0]} * ${fruits[1]} * ${fruits[2]} * ${fruits[3]} <br>`);
+
+fruits.push("Kiwi");
+document.write(`${fruits}<br>`);
+fruits.shift();
+document.write(`${fruits}<br>`);
+fruits.unshift("Lemon");
+document.write(`${fruits}<br>`);
+document.write(`${fruits.length}<br>`);
+
+// ♣ shift() 배열의 맨처음 없애기 unshift() 배열 맨처음에 하나 추가
+// ♣ pop() 배열의 마지막 없애기   push() 배열 마지막에 하나 추가 
+
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+const myChildren = myGirls.concat(myBoys); // ♣ 배열.concat(배열) = 새로운 배열
+document.write(`${typeof myChildren}<br>`);
+document.write(`${myChildren}<br>`);
+document.write(`${myChildren.splice(2,0,"Tom")}<br>`); // ♣ splice(n번째부터,지울거 갯수,추가할 것)
+document.write(`${myChildren}<br>`);
+document.write(`${myChildren.splice(2,3,"Ann", "Tom")}<br>`);
+document.write(`${myChildren}<br>`);
+
+document.write(`${myChildren.slice(1,3)}<br>`); // ♣ slice(포함,미만)
+document.write(`${myChildren.slice(-2.-1)}<br>`);
+
+document.write(`${myChildren.sort()}<br>`); // ♣ sort 오름차순 정렬
+document.write(`${myChildren.sort().reverse()}<br>`); //
+  </script>
+</body>
+</html>

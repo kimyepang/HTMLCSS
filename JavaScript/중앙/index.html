@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    a{text-decoration: none;}
+    ul{list-style: none;}
+
+    ul.btn{width: 1200px; margin: 50px auto 100px; display: flex;gap: 15px; justify-content: center;}
+    ul.btn a{font-size: 14px; display: inline-block; line-height: 35px; padding: 0 16px; background-color: #fff; color: #111111; border: 1px solid #aaa; }
+
+    ul.con li p{display: none;}
+    ul.con li div{display: none;}
+    ul.con li p.show{display:block;}
+    ul.con li div.show{display:block;}
+
+    ul.con li p{width: 1200px; height: 80px; margin: 0 auto; background-position: center; background-repeat: no-repeat; background-size: contain; margin-bottom: 50px;}
+    ul.con li div{width: 100%; height: 624px;background-position: 0 -400px; background-repeat: no-repeat; background-size:cover;}
+
+    ul.btn li a.on{background-color: #211955; color: #fff;}
+ 
+ </style>
+</head>
+<body>
+  
+
+<ul class="btn">
+  <li><a href="#">ELLE</a></li>
+  <li><a href="#">COSMOPOLITAN</a></li>
+  <li><a href="#">Harper’s BAZAAR</a></li>
+  <li><a href="#">ESQUIRE</a></li>
+  <li><a href="#">STUDIO DOT</a></li>
+  <li><a href="#">YEET</a></li>
+</ul>
+
+<ul class="con">
+  <li>
+    <p></p>
+    <div></div>
+  </li>
+  <li>
+    <p></p>
+    <div></div>
+  </li>
+  <li>
+    <p></p>
+    <div></div>
+  </li>
+  <li>
+    <p></p>
+    <div></div>
+  </li>
+  <li>
+    <p></p>
+    <div></div>
+  </li>
+  <li>
+    <p></p>
+    <div></div>
+  </li>
+</ul>
+
+
+<script>
+
+let btn = document.querySelectorAll("ul.btn li")
+let li = document.querySelectorAll("ul.con li")
+
+let titleimg = "url(images/title1.svg)"
+let bg = "url(images/visual1.png)"
+
+btn[0].querySelector("a").classList.add("on");
+
+function myfnc(){
+  btn.forEach(function(value,keys){
+    value.querySelector("a").classList.remove("on")
+  })
+}
+
+btn.forEach(function(value,keys){
+  value.onclick = function(e){
+    e.preventDefault;
+    myfnc();
+    value.querySelector("a").classList.add("on");
+
+  li.forEach(function(value,keys){
+    value.querySelector("p").style.backgroundImage = titleimg.replace(titleimg.slice(-6, -5), keys+1);
+    value.querySelector("div").style.backgroundImage = bg.replace(bg.slice(-6, -5), keys+1);
+value.querySelector("p").classList.remove("show")
+value.querySelector("div").classList.remove("show")
+  })
+
+  li[keys].querySelector("p").classList.add("show");
+  li[keys].querySelector("div").classList.add("show");
+
+  }
+})
+
+</script>
+
+
+</body>
+</html>

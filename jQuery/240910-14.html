@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    .parent1, .parent2{border: 1px solid; padding: 50px; margin: 20px;}
+  </style>
+<script>
+$(function(){
+  $(".parent1").focus(function(){$(this).css("background-color","#ccc")}) //포커스, 블러는 대상 자체에 (this) 적용 되지만
+              .blur(function(){$(this).css("background-color","#fff")});
+  $(".parent2").focusin(function(){$(this).css("background-color","#ccc")}) //포커스인, 포커스아웃은 (this) 부모까지 제어
+              .focusout(function(){$(this).css("background-color","#fff")});
+});
+</script>
+
+<body>
+<div class="parent1">
+  <input type="text">
+  <input type="text">
+</div>
+<div class="parent2">
+  <input type="text">
+  <input type="text">
+</div>
+</body>
+</html>

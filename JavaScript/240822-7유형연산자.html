@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+let a = 10;
+let b = "20";
+let c = String(30);
+
+document.write("a의 타입은 : ",typeof a,"<br>") 
+document.write("b의 타입은 : ",typeof b,"<br>") 
+document.write("c의 타입은 : ",typeof c,"<br>")
+document.write("10.33의 타입은 : ",typeof 10.33,"<br>")
+
+//문자는 string, 숫자는 number
+//instance of는 배열할 때 필요
+
+let k = Number("kcm")
+document.write(k+"<br>") //NaN = not a number
+
+document.write(parseFloat(123.45678)+"<br>");
+document.write(parseFloat("123.45678")+"<br>");
+
+//문자나 숫자로 바꾸는 메소드
+let x = "5";
+let y = +x;
+document.write(typeof y + "<br>");
+document.write(String(100 + 23)+"<br>") //123이지만 문자(string)임
+document.write((100 + 23).toString()+"<br>") 
+
+let num1 = 5.3456789;
+let num2 = 10000000;
+document.write(num1.toExponential(3)+"<br>") //소수점 밑 3자리까지 반올림 함
+document.write(num2.toExponential(3)+"<br>") //지수표기(n승)
+document.write(num1.toFixed(3)+"<br>") //
+document.write(num2.toFixed(3)+"<br>") //
+</script>  
+</body>
+</html>

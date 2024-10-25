@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .box{height: 300px;}
+p{width: 300px; height: 300px;background: #ccc;}
+  </style>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+</head>
+<body>
+  <div class="box">
+    <p></p>
+  </div>
+  <button id="up">slide up</button>
+  <button id="down">slide down</button>
+  <button id="toggle">slide toggle</button>
+
+  <script>
+    $(function(){
+      $("#up").click(function(){
+        $("p").slideUp(1000, "linear");
+      })
+    });
+    $(function(){
+      $("#toggle").click(function(){
+        $("p").slideToggle(1000, "linear");
+      })
+    });
+    $(function(){
+      $("#down").click(function(){
+        $("p").slideDown(1000, "easeInOutElastic", function(){ //ease어쩌구 같은 속도는 제이쿼리 ui 있어야 줄수있음
+          $("#down").text("slideup");
+        });
+      })
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function(){
+      //$("p").remove("#demo"); //아예 없앰
+      $("p").empty(); //안 보이게 함
+      //console.log($("#demo").data("num"))
+      console.log($(".test").attr("a", "ccc")) //a라는 속성을 bbb에서 ccc로 변경
+    })
+  </script>
+</head>
+<body>
+  <p id="demo" data-num="first">문단태그</p>
+  <p class="test" a="bbb">p태그입니다</p>
+</body>
+</html>

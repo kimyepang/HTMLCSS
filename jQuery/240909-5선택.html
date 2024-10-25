@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(function(){
+  $("a").click(function(){
+    $(this).text("변경함");
+  })
+  $('a[target="_blank"]').css("color","red").css("textDecoration","none")
+  $('a[target!="_blank"]').css({color:"black","textDecoration":"none"}) //!=아닌애
+  //속성의 속성을 선택할 땐 대괄호
+  $(":button").css("background","skyblue");
+  $("input:even").css("background","lightpink");
+  $("input:odd").css("background","lightgreen");
+  $("input:first-of-type").css("background","white");
+  $("input:nth-of-type(2)").css("background","beige");
+  $("p:only-child").css("border","1px solid"); //자식이 p 한개인 애들
+ // $("p:only-of-type").css("border","1px solid") //p만 있으면 됨
+
+</script>
+
+<body>
+
+<a href="#" target="_blank">링크태그</a>
+<a href="#" target="_new">링크태그</a>
+<a href="#">링크태그</a>
+<a href="#">링크태그</a>
+<a href="#">링크태그</a>
+<input type="button" value="01">
+<input type="button" value="02">
+<input type="button" value="03">
+<input type="button" value="04">
+<input type="button" value="05">
+<div><p>문단태그</p></div>
+<div>
+  <p>문단태그</p>
+  <a href="#">링크태그</a>
+</div>
+</body>
+</html>

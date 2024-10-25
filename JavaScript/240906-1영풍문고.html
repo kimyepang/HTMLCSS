@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+*{margin: 0; padding: 0;}
+
+    body {
+      background: rgb(255, 220, 225);
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slide{width: 100%; overflow-x: hidden;}
+    .swiper {
+      width: 684px;
+      height: 430px;
+      overflow: visible;
+      
+    }
+ 
+    .swiper-slide {text-align: center;display: flex;justify-content: center;align-items: center;width: 100%;;  height: 430px;
+      border-radius: 20px; overflow: hidden; }
+
+    .swiper-slide img {display: block;width: 100%; height: 430px;}
+
+    #btn{}
+    .swiper-button-next{background-color: #ffffff4d; border-radius: 50%;width: 50px;height: 50px; color: #fff; transform: scale(0.5) translateX(190px); padding: 10px;}
+    .swiper-button-prev{background-color: #ffffff4d; border-radius: 50%; width: 50px; height: 50px; color: #fff;transform: scale(0.5)translateX(-190px); padding: 10px;}
+
+    .swiper-pagination-bullet{background-color: #aaa;}
+    .swiper-pagination-bullet-active{background-color: #80888a;}
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="slide">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/yp_01.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/yp_02.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/yp_03.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/yp_04.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/yp_05.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/yp_06.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/yp_07.png" alt=""></div>
+        <div class="swiper-slide"><img src="images/yp_08.png" alt=""></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div id="btn">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 100,
+      loop: true,
+      centeredSlides: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        dalay: 1000,
+      },
+    });
+  </script>
+</body>
+
+</html>

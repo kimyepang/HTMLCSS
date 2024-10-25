@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .box{height: 300px;}
+  p{width: 300px; height: 300px;background: #ccc;}
+  .ball{width: 50px; height: 50px; background: #ccc; border-radius: 50%; position: relative;}
+  </style>
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+
+   $(function(){
+
+    $("#btn").click(function(){
+      $("p").animate({width:"0", backgroundColor: "red"}, 1000, "linear") //속성은 중괄호 안에!!
+    });
+
+    $("#move").click(function(){ //애니메이트 부여
+      $(".ball").animate({left: "300px"}, 1000) //체인 걸어서 계속 부여 가능, ; 세미콜론 쓰면 안돼/ 순서대로 실행됨
+                .animate({top: "300px"}, 1000)
+                .animate({left: "0"}, 1000)
+                .animate({top: "0"}, 1000)
+    });
+
+  // interval : 클릭 안해도 영원히 진행
+    let interval = setInterval(function(){ 
+      $("#move").click() //#move를 클릭한것처럼 영원히 해줘 4초 딜레이 하고!
+    }, 4000);
+
+    //interval을 hover하면 끝내겠다
+    $("#move").hover(function(){
+      clearInterval(interval); 
+    }, 
+     //hover 안했을땐 interval 구문 다시 실행하겠다(hover구문 아직 안 끝남, 콤마로 연결)
+    function(){
+      interval = setInterval(function(){
+      $("#move").click() 
+    }, 4000);
+    });
+
+   })
+  </script>
+</head>
+<body>
+  <div class="box">
+    <p></p>
+  </div>
+  <button id="btn">width 0</button>
+  <div class="ball"></div>
+  <button id="move">move ball</button>
+
+</body>
+</html>

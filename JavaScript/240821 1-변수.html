@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    var userName = "그린";
+    var userId = "컴퓨터";
+    var userId = "computer";
+    userId = "12345"; //재할당
+    var pw; //변수를 선언만 해놓음
+    {var pw = "aaaaa"} // {}안에서 선언하면 {}:코드블럭 안에서만 사용할 수 있다. 바깥에선 {} 내부값이 할당되지 않는다.
+    pw = 456789 //할당
+    
+    document.write(userName + userId + pw); //write:출력
+
+    let name = "그린";
+    let name1; //let은 변수 중복 불가능!
+    name1 = "green"
+    {let name1 = "computer"} // {} 안에 들어간 건 '지역변수' 라서 중복 가능
+    let name2, name3, name4 //변수 여러개 만들어 놓을 수 있다
+
+    // const number; //const는 선언만 하고 끝낼 수 x 
+    // number = 123 //재할당 불가능. 
+
+    const number = 123 //선언과 동시에 할당
+    const a01 = true;
+    const a02 = null;
+    const a03 = 100;
+    document.write(a01 + a02);
+    //상황연상 조건 ? 참인값 : 거짓인값
+    document.write(a03 ? "참" : "거짓+<Br>")
+    document.write(a03>=100 ? "100보다큰수" : "100보다작은수")
+  </script>
+
+</body>
+</html>

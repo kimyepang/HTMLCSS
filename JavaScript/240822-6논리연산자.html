@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<script>
+let a = 10;
+let b = 20;
+let c = 30;
+let d = a > b && b < c; //조건 둘다 참일때 true
+
+document.write("논리곱 : ",d,"<br>") //value 같니?
+
+d = a > b || b < c; //하나만 참이면 true
+
+document.write("논리합 : ",d,"<br>")
+
+d = !(a > b) || b < c; //!()는 부정
+
+document.write("논리부정 : ",d,"<br>")
+
+</script>  
+</body>
+</html>

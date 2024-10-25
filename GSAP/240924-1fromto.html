@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.box{width: 50px; height: 50px;}
+.gradient-green{background: linear-gradient(#fff, green);}
+.gradient-purple{background: linear-gradient(#fff, purple);}
+.gradient-blue{background: linear-gradient(#fff, blue);}
+
+
+  </style>
+</head>
+<body>
+<div class="box gradient-green green"></div>
+<div class="box gradient-purple purple"></div>
+<div class="box gradient-blue blue"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>
+  gsap.to(".green", {rotation: 360, x: 500, duration: 3, ease: "bounce.out", repeat: -1, yoyo:true, delay: 2}); //0에서 500으로, repeat: -1: 영원히, yoyo:true 왔다갔다
+  gsap.from(".purple", {rotation: -360, x: -500, duration: 3}); //-500에서 원래자리 0으로
+  gsap.fromTo(".blue", {x: -500},{rotation: 360, x: 500, duration: 3}); //-500에서 100으로
+</script>
+</html>

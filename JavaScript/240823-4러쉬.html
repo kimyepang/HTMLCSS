@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    ul{list-style: none;}
+
+.con .txt{width: 894px; height: 460px; margin: 50px auto; display: flex;flex-wrap: wrap;  column-gap: 150px;row-gap: 100px; justify-content: space-between;}
+.con .txt li{width: 180px; height: 180px; background: #222; border-radius: 50%; position: relative; cursor: pointer;}
+.con .txt li p{background-position: center; background-repeat: no-repeat; background-size: 120px 120px; width: 100%;height: 100%;}
+.con .txt li:first-child p{background-image: url(https://weare.lush.co.kr/images/ico_main_value01.svg);}
+.con .txt li:nth-child(2) p{background-image: url(https://weare.lush.co.kr/images/ico_main_value02.svg);}
+.con .txt li:nth-child(3) p{background-image: url(https://weare.lush.co.kr/images/ico_main_value03.svg);}
+.con .txt li:nth-child(4) p{background-image: url(https://weare.lush.co.kr/images/ico_main_value04.svg);}
+.con .txt li:nth-child(5) p{background-image: url(https://weare.lush.co.kr/images/ico_main_value05.svg);}
+.con .txt li:nth-child(6) p{background-image: url(https://weare.lush.co.kr/images/ico_main_value06.svg);}
+
+.con .bg{width: 100%; height: 560px; position: absolute; top:0;}
+
+.con .bg li.on{display: block;}
+
+  </style>
+</head>
+<body>
+  
+  <div class="con">
+    <ul class="bg">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <ul class="txt">
+      <li><p></p></li>
+      <li><p></p></li>
+      <li><p></p></li>
+      <li><p></p></li>
+      <li><p></p></li>
+      <li><p></p></li>
+    </ul>
+</div>
+
+<script>
+
+let li = document.querySelectorAll(".con .txt li")
+let bg = document.querySelectorAll(".con .bg li")
+
+bg.forEach(function(value,key){
+  console.log(key);
+  value[key].style.background = "url(https://weare.lush.co.kr/images/ico_main_value0" + [key]+1 + ".svg)"
+})
+
+li.forEach(function(value,key){
+  value.onmouseover=function(){
+    bg.forEach(function(value,key){
+      value[key].classList.add("on")
+    })
+  }
+})
+
+
+
+</script>
+
+</body>
+</html>

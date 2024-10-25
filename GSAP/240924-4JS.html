@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <style>
+.btn{font-size: 20px; background: #ccc; padding: 5px 10px; border-radius: 10px; color: #fff; transform: scale(0.5); border: none;}
+  </style>
+</head>
+<body>
+<button class="btn">Buy</button>
+</body>
+<script>
+
+let btn=gsap.to(".btn", //특정 클래스에 추가한 지삽 애니메이션을 함수로 정의할 수 있다.
+{scale:1, yoyo:true, repeat:-1, paused:true
+});
+
+document.querySelector(".btn").onmouseenter = function(){
+  btn.restart();
+}
+document.querySelector(".btn").onmouseleave = function(){
+  btn.pause();
+  gsap.to(".btn", {scale:0.8,});
+}
+
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+body {
+  display: flex;
+  justify-content: space-around;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.box{width: 50px; height: 50px;}
+.gradient-green{background: linear-gradient(#fff, green);}
+.gradient-purple{background: linear-gradient(#fff, purple);}
+.gradient-blue{background: linear-gradient(#fff, blue);}
+
+
+  </style>
+</head>
+<body>
+<div class="box gradient-green green"></div>
+<div class="box gradient-purple purple"></div>
+<div class="box gradient-blue blue"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>
+ /* gsap.to(".green", {x: 500, duration: 5});
+  gsap.to(".purple", {x: 500, duration: 5, delay: 5});
+  gsap.to(".blue", {x: 500, duration: 5, delay: 10}); */
+
+//타임라인: 따로 delay를 입력하지 않아도 전 애니메이션이 끝난 뒤에 실행된다
+
+let tl = gsap.timeline({repeat:2, repeatDelay: 1, yoyo:true}); //create the timeline
+tl.to(".green", {x: 500, duration: 2}); //start sequencing
+tl.to(".purple", {x: 500, duration: 3}, "<1") //부등호: 앞에꺼가 1초하고있을때 다음꺼가 실행되며, 맞물리며 진행
+tl.to(".blue", {x: 500, duration: 4});
+</script>
+</html>

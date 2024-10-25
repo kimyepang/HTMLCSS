@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+let text = "";
+let text1 = "";
+cars = ["소나타", "아반떼", "그랜저", "벤츠", "볼보", "제네시스"];
+text += cars[0] + "<br>"; //text = text + "소나타" + "<br>";
+text += cars[1] + "<br>"; //text = "소나타" + "아반떼" + "<br>";
+text += cars[2] + "<br>";
+text += cars[3] + "<br>";
+text += cars[4] + "<br>";
+text += cars[5] + "<br>";
+document.write(`${text}<br>`);
+
+//이런 반복적인 작업을 축약한 게 for 구문
+
+
+//i가 5보다 작거나 같아질 때까지 후위연산을 반복(0을 먼저 출력하고 더한다) i++ = i=i+1 / 전위연산은 ++i
+
+for(let i=0; i<=5; i++){
+  text1 += cars[i] + "<br>"
+}
+  document.write(`${text1}<br>`);
+
+//text와 cars를 선언하고 text에 for과 i로 계속 할당!
+
+let txt = ""
+for(let i=0; i<=5; i++){
+    // `The number is ${i}<br>`
+    txt += `The number is ${i}<br>`;
+}
+document.write(`${txt}<br>`)
+
+// ♣ 100까지 출력
+
+// for(let i=1; i<=100; ++i){
+//   document.write(`${i}<br>`)
+// }
+
+// for(let i=100; i>=1; i--){
+//   document.write(`${i}<br>`)
+// }
+
+
+// ♣ 짝수출력
+
+for(let i=1; i<=50; i++){
+  document.write(`${i*2}`)
+}
+
+document.write("<br>")
+
+for(let i=1; i<=100; i++){
+  if (i % 2 == 0) {
+    document.write(i)
+  }
+}
+
+document.write("<Br>")
+
+  for(let i=2; i<=100; i+=2){//i=i+2
+    document.write(i)
+  }
+
+  document.write("<br>")
+  
+// ♣ 1부터 10까지의 합계
+let sum=0;
+for(let i=1; i<=10; i++){
+  sum += i; // sum = sum + i
+}
+document.write(sum)
+
+document.write("<br>")
+
+  </script>
+</body>
+</html>

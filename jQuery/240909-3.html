@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<style>
+  p{
+    color: blue;
+    font-size: 100px;
+  }
+</style>
+
+<script>
+  let pele=document.querySelectorAll("p");
+  pele.forEach(function(v,k){
+    v.style.color="red";
+    v.style.fontSize="32px";
+  })
+</script>
+
+<body>
+
+  <p>하나</p>
+  <p>둘</p>
+  <p>셋</p>
+  <p>넷</p>
+
+</body>
+</html>

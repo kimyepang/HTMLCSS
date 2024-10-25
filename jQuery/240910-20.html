@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <style>
+
+  </style>
+<script>
+
+//마우스 무브 : 커서 바꿀 때 
+//원래 easing 이 swing, linear밖에 없었지만 min.js 가져와서 많은 속성을 쓸 수 있다
+
+$(function(){
+$("#hide").click(function(){
+  // $(this).hide(시간,"easing",callback);
+  // easing: "swing", "linear" 두개뿐
+   $(this).hide(1000, "swing", function(){
+    alert("hide작업완료")
+   }); // 1초동안 스윙으로 숨기고 콜백해서 불러!! 아직 끝난게 아니라 할거 더있어서
+});
+$("#show").click(function(){
+  $("#hide").show(1000, "easeOutBounce", function(){
+    alert("show작업완료");
+  });
+});
+$("#toggle").click(function(){
+  $("#show").toggle(1000,"easeOutBounce"); //토글은 콜백 없음. 버튼 하나로 다른애를 조작
+})
+});
+</script>
+
+<body>
+<p>If ou click on the "Hide" button, I will diappear,</p>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="toggle">Toggle</button>
+</body>
+</html>

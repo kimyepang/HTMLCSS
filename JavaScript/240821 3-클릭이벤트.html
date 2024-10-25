@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+  *{margin: 0;padding: 0;}
+  section{height: 100vh;display: flex;justify-content: center;align-items: center;}
+  section p{width: 100px;line-height: 50px;text-align: center;cursor: pointer;font-size: 20px;background: rgba(0,0,0,0.5);}
+  section p a{display: block; width: 100%; text-decoration: none; color: #fff;}
+  section.bg{background: rgba(0,0,0,0.8);}
+  section p>a.on{background: rgba(255,255,255,0.5); color:red;} 
+  div#popup{position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); border: 1px solid; background: #fff; width: 500px; height: 500px; display: none;}
+
+  /* div#popup.on{display: block;}
+  div#popup.off{display: none;} */
+
+</style>
+</head>
+<body>
+  
+  <section>
+    <p><a href="#">클릭</a></p>
+  </section>
+
+  <div id="popup">
+    popup
+    <a href="#">close</a>
+  </div>
+
+  <script>
+    let btn = document.querySelector("section>p>a");
+    let popup = document.querySelector("div#popup");
+    let popupa = document.querySelector("div#popup>a");
+
+    popup.display = "none"
+
+      btn.addEventListener("click", function(e){
+      e.preventDefault(); 
+      // popup.classList.add("on")
+      popup.style.display = "block"
+    })
+      popupa.onclick = function(e){
+        e.preventDefault(); 
+        // popup.classList.add("off")
+        popup.style.display = "none"
+      }
+
+  </script>
+
+</body>
+</html>

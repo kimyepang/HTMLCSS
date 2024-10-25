@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+
+/*$(function(){
+  $("#demo").mousedown(function(){
+    console.log("mousedown")
+  })
+  })*/
+$(function(){
+  $("#demo").mouseup(function(){
+    console.log("up")
+  })
+  });
+$("input").focus(function(){ //인풋에 커서가 진입했을 때, 벗어났을 때
+  $(this).css("background-color", "#cccccc")})
+  .blur(function(){$(this).css("background-color", "#ffffff")})
+
+
+
+</script>
+
+<body>
+<p id="demo">마우스다운</p>
+<input type="text">
+<input type="text">
+
+</body>
+</html>

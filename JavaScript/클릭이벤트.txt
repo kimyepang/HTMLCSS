@@ -1,0 +1,33 @@
+
+btn 누르면 bg 보이게
+
+style에 클래스 입력 : btn.on(버튼색바뀜) bg.show(display block처리) 
+
+let btn
+let bg
+
+btn[0].classList.add("on")
+bg[0].classList.add("show")
+
+function remove함수(){
+ btn.forEach(keys,item){
+   keys.classList.remove("on")}
+}
+
+1. btn.forEach(function(keys,item){
+ 1) console.log(keys);
+ 2) keys.onclick = function(e){
+  (1) e.preventDefault;
+  (2) console.log(item)
+  (3) remove함수();
+  (4) keys.classList.add("on")
+  (5) div.forEach(function(value,key){
+         value.classList.remove("show")})
+
+
+  (6) div[item].classList.add("show");
+ }
+})
+
+
+

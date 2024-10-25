@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+    *{margin: 0; padding: 0;}
+    ul{list-style: none; font-family: 'Pretendard-Regular';}
+    a{color: #333; text-decoration: none; font-family: 'Pretendard-Regular';}
+    ul{width: 1300px; margin: 100px auto; display: flex; justify-content: space-between;}
+    ul li{}
+    ul li>a{color: #ffffff80; background: #333333cc; font-size: 20px; width: 200px;line-height: 54px; display:inline-block; border-radius: 100px; text-align: center;}
+    ul li div{position: absolute; left: 0; top: 250px; width: 100%; padding: 150px 10px; text-align: center; background-size: cover;  background-repeat: no-repeat;display: none; box-sizing: border-box;}
+    ul li:first-child div{background-image: url(https://www.lotternd.com/assets/images/sub/research/research-ban1.jpg);}
+    ul li:nth-child(2) div{background-image: url(https://www.lotternd.com/assets/images/sub/research/research-ban2.jpg);}
+    ul li:nth-child(3) div{background-image: url(https://www.lotternd.com/assets/images/sub/research/research-ban3.jpg);}
+    ul li:nth-child(4) div{background-image: url(https://www.lotternd.com/assets/images/sub/research/research-ban4.jpg);}
+    ul li:nth-child(5) div{background-image: url(https://www.lotternd.com/assets/images/sub/research/research-ban6.jpg);}
+    ul li div p:first-child{font-size: 38px; margin-bottom: 10px;}
+    ul li div p:nth-child(2){font-size: 22px;}
+
+    ul li>a.on{color: #fff; background: #da291c;}
+    ul li div.show{display: block;}
+
+  </style>
+</head>
+<body>
+  
+  <ul>
+    <li>
+      <a href="#">연구개발</a>
+      <div>
+        <p>연구개발</p>
+        <p>소비자의 니즈와 시장 선호도에 부합하는 신제품을 출시하고 품질을 개선합니다.</p>
+      </div>
+    </li>
+    <li>
+      <a href="#">기초연구</a>
+      <div>
+        <p>기초연구</p>
+        <p>바이오 연구, 신소재 발굴 등 개발의 기틀을 마련하고 신규 솔루션을 개척합니다.</p>
+      </div>
+    </li>
+    <li>
+      <a href="#">패키지연구</a>
+      <div>
+        <p>패키지연구</p>
+        <p>제품 포장을 설계하고 디자인하여 품질 유지와 아이덴티티 강화를 이룹니다.</p>
+      </div>
+    </li>
+    <li>
+      <a href="#">기술연구</a>
+      <div>
+        <p>기술연구</p>
+        <p>첨단 기술을 현장에 적용하여 식품 제조 방식의 선진화를 이끕니다.</p>
+      </div>
+    </li>
+    <li>
+      <a href="#">안전관리</a>
+      <div>
+        <p>안전관리</p>
+        <p>위생 관리와 위해 사고 예방을 통해 롯데 식품 및 상품의 안전을 책임집니다.</p>
+      </div>
+    </li>
+    <li>
+      <a href="#">연구전략</a>
+      <div>
+        <p>연구전략</p>
+        <p>진행 방향을 설계하고 실질적 연구 활동을 지원합니다.</p>
+      </div>
+    </li>
+  </ul>
+
+<script>
+  let btn = document.querySelectorAll("ul li>a")
+  let div = document.querySelectorAll("ul li div")
+
+  btn[0].classList.add("on");
+	div[0].classList.add("show");
+
+		function myfnc(){
+		btn.forEach(function(keys,item){
+				keys.classList.remove("on");
+			});
+		}
+	  btn.forEach(function(keys,item){
+			  console.log(keys);
+			  keys.onclick=function(e){
+           e.preventDefault();
+				    myfnc();
+            console.log(item);
+				    keys.classList.add("on");
+            div[item].classList.add("show");
+				    div.forEach(function(value,key){
+					        value.classList.remove("show");
+				          })
+				    
+			}
+		});
+
+  
+</script>
+
+</body>
+</html>

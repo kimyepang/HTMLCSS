@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+$(function(){
+  $("p:nth-child(2)").css("display","none")
+  $("p:nth-child(3)").hide();
+  $("p:nth-child(3)").show();
+  $("p:nth-child(4)").css("display","")
+  $("p:nth-child(5)").remove();
+  $("p:last").css({color:"blue"});
+  let node = $("#demo").parent().prop("nodeName");
+  console.log("node")
+})
+
+//hide는 있는데 안 보이는 거, remove는 없애버리는 거
+</script>
+
+<body>
+
+<p id="demo">jQuery</p>
+  <p>하나</p>
+  <p>둘</p>
+  <p>셋</p>
+  <p>넷</p>
+  <p>다섯</p>
+
+</body>
+</html>

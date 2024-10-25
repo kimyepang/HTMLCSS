@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+/* body{height: 1000px;;cursor: url(images/twitter.png), auto;} */
+
+body{height: 1000px;}
+.custom{width: 20px; height: 20px; background: lightyellow; border-radius: 50%; pointer-events: none; z-index: 999; animation: circle linear 1s infinite;left: 0; top: 0; position: fixed;}
+@keyframes circle {
+  0%{transform: scale(1);}
+  50%{transform: scale(2); background-color: pink;}
+  1000%{transform: scale(1);}
+}
+.con{height: 500px; border: 1px solid; margin: 100px; cursor: none;}
+.con1{height: 500px; border: 1px solid red; margin: 100px; cursor: none; cursor: url(images/twitter.png), auto;}
+  </style>
+</head>
+<body>
+<div class="custom"></div>
+<div class="con"></div>
+<div class="con1"></div>
+<script>
+ /* document.querySelector("body").onmousemove=function(e){ //마우스무브는 매개변수 e 필요!!
+let x = e.clientX;
+let y = e.clientY;
+document.querySelector(".custom").style.left= x+"px";
+document.querySelector(".custom").style.top= y+"px";
+  }*/
+  document.querySelector(".con").onmousemove=function(e){ //.con위에서 마우스 움직일 때
+    let x = e.clientX;
+    let y = e.clientY;
+    document.querySelector(".custom").style.left= x+"px";
+    document.querySelector(".custom").style.top= y+"px";
+  }
+  document.querySelector(".con").onmouseenter=function(){ //.con에 마우스가 진입했을 때
+    document.querySelector(".custom").style.display="block"
+  }
+  document.querySelector(".con").onmouseleave=function(){ //.con에서 마우스가 나갔을 때
+    document.querySelector(".custom").style.display="none"
+  }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+
+$(function(){
+  //$("a:eq(1)").css("color","red"); //1인 애
+ // $("a:gt(1)").css("color","red"); //1보다 큰애
+  //$("a:lt(1)").css("color","red"); //1보다 작은애
+  //$("a:not(:eq(1))").css("color","red"); //1이 아닌 애
+  $("a:contains('링크')").css("color","red"); 
+  //$("div:has(p)").css("border","1px solid"); 
+  $("p:parent").css("border","1px solid")
+  })
+
+</script>
+
+<body>
+
+<a href="#" target="_blank">링크태그</a>
+<a href="#" target="_new">링크태그</a>
+<a href="#">링크태그</a>
+<a href="#">링크태그</a>
+<a href="#">링크태그</a>
+<input type="button" value="01">
+<input type="button" value="02">
+<input type="button" value="03">
+<input type="button" value="04">
+<input type="button" value="05">
+<div><p>문단태그</p></div>
+<div>
+  <p>문단태그</p>
+  <a href="#">링크태그</a>
+</div>
+</body>
+</html>

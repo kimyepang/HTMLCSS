@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+  *{margin: 0;padding: 0;}
+  section{height: 100vh;display: flex;justify-content: center;align-items: center;}
+  section p{width: 100px;line-height: 50px;text-align: center;cursor: pointer;font-size: 20px;background: rgba(0,0,0,0.5);}
+  section p a{display: block; width: 100%; text-decoration: none; color: #fff;}
+  section.bg{background: rgba(0,0,0,0.8);}
+  section p>a.on{background: rgba(255,255,255,0.5); color:red;} 
+  /* 클래스를 하나 지정해 놓으면, 여러개 지정해서 스타일 바꿀 필요 없이 원툴 적용 가능 */
+</style>
+</head>
+<body>
+  
+  <section>
+    <p><a href="#">클릭</a></p>
+  </section>
+
+  <script>
+    let btn = document.querySelector("section>p>a");
+    let sec = document.querySelector("section");
+
+    // document.querySelector("section>p>a").onclick = function(){
+    // btn.onclick = function(e){
+      btn.addEventListener("click", function(e){
+      // console.log("실행됨")
+
+      e.preventDefault(); //a가 #으로 넘어가는 걸 막고 구문을 실행 *a태그는 이 절차가 있어야 함!
+
+      // document.querySelector("section").style.background = "rgba(0,0,0,0.8)";
+      // document.querySelector("section").classList.toggle("bg");
+      sec.classList.toggle("bg");
+
+      // document.querySelector("section>p>a").style.background = "rgba(255,255,255,0.5)"
+      //본인은 다시 지정할 필요 없이 this
+      // this.style.background = "rgba(255,255,255,0.5)"; 
+      // this.style.color = "red";
+
+      //this.style 어쩌구. background color fontweight 등등 할필요가 없이 on 클래스 하나로 모두 적용 가능이요!
+      this.classList.toggle("on");
+      
+    })
+  </script>
+
+</body>
+</html>
